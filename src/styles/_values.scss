@@ -1,0 +1,33 @@
+.container.values-container {
+  margin-top: 36px;
+}
+.card-wrap {
+  display: flex;
+flex-direction: column;
+  background: #eaedf1;
+  padding: 12px;
+}
+.card-head {
+  display: flex;
+  align-items: baseline;
+  padding-bottom: 33px;
+  border-bottom: 1px solid #97D28B;
+  margin-bottom: 12px;
+
+}
+.value-name {
+  position: relative;
+  margin: 0;
+  //   align-self: center;
+}
+.grid-icon {
+  width: 16px;
+  height: 16px;
+  //   align-self: center;
+  margin-right: 8px;
+}
+.value-descr{
+    font-size: 14px;
+    text-align: justify;
+    letter-spacing: -0.56px;
+}

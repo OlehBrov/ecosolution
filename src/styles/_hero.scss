@@ -1,0 +1,60 @@
+.hero-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  margin-top: 50%;
+
+  font-family: "Oswald";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  /* 100% */
+  text-transform: uppercase;
+}
+.paragraph {
+  text-align: justify;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+
+  line-height: normal;
+  letter-spacing: -0.64px;
+}
+.hero-link {
+  display: inline-flex;
+  margin: 24px auto 0;
+  align-items: center;
+  gap: 12px;
+  border-radius: 500px;
+  border: 1px solid #97d28b;
+  padding: 4px 4px 4px 16px;
+  font-family: "Fira Sans", sans-serif;
+
+  font-size: 16px;
+  line-height: 18px;
+  /* 112.5% */
+  letter-spacing: -0.64px;
+}
+.link-arrow_wrap {
+  border-radius: 50%;
+  background: #97d28b;
+  padding: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.separator {
+  height: 1px;
+  width: 100%;
+  background: #97d28b;
+  margin: 24px 0px;
+}
+.contact-link {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.64px;
+  text-align: center;
+}

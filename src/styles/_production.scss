@@ -1,0 +1,98 @@
+.container.production-container {
+  padding-top: 36px;
+}
+.production-heading {
+}
+.counter-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 96px;
+  margin-bottom: 96px;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 48px;
+    background-color: #97d28b;
+    top: -70px;
+    left: 50%;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 48px;
+    background-color: #97d28b;
+    top: 70px;
+    left: 50%;
+  }
+}
+
+.counter {
+  color: #97d28b;
+
+  text-align: center;
+  font-family: Oswald;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  /* 100% */
+  text-transform: uppercase;
+  &::after {
+    content: " kWh";
+    color: #173d33;
+
+    text-align: center;
+    font-family: Oswald;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: none;
+    /* 100% */
+  }
+}
+.description-wrap {
+  padding: 52px 18px;
+  background: #eaedf1;
+}
+.services-description {
+  font-family: "Oswald";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  /* 100% */
+  text-transform: uppercase;
+}
+.services-nav {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0 36px 0;
+  background-image: url(../images/energy-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.services-list {
+  //    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.services-item {
+  display: flex;
+
+  justify-content: center;
+}
+.services-item-link {
+  color: #173d33;
+  text-align: justify;
+  font-family: "Fira Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.8px;
+}

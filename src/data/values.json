@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Openness",
+    "image": "/images/values/maximize-circle.svg",
+    "text": "to the world, people, new ideas and projects"
+  },
+  {
+    "id": 2,
+    "name": "Responsibility",
+    "image": "/images/values/global-edit.svg",
+    "text": "we are aware that the results of our work have an impact on our lives and the lives of future generations"
+  },
+  {
+    "id": 3,
+    "image": "/images/values/wind-farms-fields.png"
+  },
+  {
+    "id": 4,
+    "image": "/images/values/man-worker-firld-by-solar-panels.png"
+  },
+  {
+    "id": 5,
+    "name": "Innovation",
+    "image": "/images/values/cpu-charge.svg",
+    "text": "we use the latest technology to implement non-standard solutions"
+  },
+  {
+    "id": 6,
+    "name": "Quality",
+    "image": "/images/values/ranking.svg",
+    "text": "we do not strive to be the first among others, but we want to be the best in our business"
+  }
+]

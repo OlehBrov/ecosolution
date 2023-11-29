@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Andrii Duda",
+    "position": "CEO",
+    "image": "/images/team/team-1.png"
+  },
+  {
+    "id": 2,
+    "name": "Yurii Turchenko",
+    "position": "Technology officer",
+    "image": "/images/team/team-2.png"
+  },
+  {
+    "id": 3,
+    "name": "Vitalii Shevchenko",
+    "position": "Director",
+    "image": "/images/team/team-3.png"
+  },
+  {
+    "id": 4,
+    "name": "Victor Dunaev",
+    "position": "Senior engineer",
+    "image": "/images/team/team-4.png"
+  }
+]
