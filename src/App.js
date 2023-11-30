@@ -8,6 +8,11 @@ import { breakpoints } from "./utils/mediaConstants";
 import "./styles/App.scss";
 import { ProductionSection } from "./sections/production/ProductionSection";
 import { Cases } from "./sections/cases/Cases";
+import { FaqSection } from "./sections/faq/FaqSection";
+import { CustomersSection } from "./sections/ourCustomers/CustomersSection";
+import { ContactUsSection } from "./sections/contactUs/ContactUsSection";
+import { ContactForm } from "./sections/contactForm/ContactForm";
+import { Footer } from "./sections/footer/Footer";
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState(breakpoints.wMobile);
@@ -15,11 +20,11 @@ function App() {
     if (data >= breakpoints.wMobile && data < breakpoints.wSemiMobile) {
       setCurrentScreen(breakpoints.wMobile);
     } else if (data >= breakpoints.wSemiMobile && data < breakpoints.wTablet) {
-      setCurrentScreen(breakpoints.wSemiMobile)
+      setCurrentScreen(breakpoints.wSemiMobile);
     } else if (data >= breakpoints.wTablet && data < breakpoints.wDesktop) {
-      setCurrentScreen(breakpoints.wTablet)
+      setCurrentScreen(breakpoints.wTablet);
     } else if (data >= breakpoints.wDesktop) {
-      setCurrentScreen(breakpoints.wDesktop)
+      setCurrentScreen(breakpoints.wDesktop);
     }
   };
   window.addEventListener("resize", (e) =>
@@ -36,7 +41,12 @@ function App() {
       <IntroductionSection />
       <ValuesSection currentScreen={currentScreen} />
       <ProductionSection />
-      <Cases/>
+      <Cases />
+      <FaqSection />
+      <CustomersSection currentScreen={currentScreen} />
+      <ContactUsSection />
+      <ContactForm />
+      <Footer/>
     </>
   );
 }

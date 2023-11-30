@@ -1,0 +1,23 @@
+[
+  {
+    "id": "001",
+    "question": "How do wind turbines and solar panels work together in a renewable energy system?",
+    "answer": "Wind turbines and solar panels generate electricity through different mechanisms. Wind turbines harness the kinetic energy of the wind to turn blades, which then drive a generator. Solar panels convert sunlight into electricity through the photovoltaic effect. When integrated into a renewable energy system, these technologies complement each other by providing a continuous and reliable power supply. Wind power is often more abundant during certain times, while solar power is consistent during daylight hours, resulting in a more stable overall energy output."
+  },{
+    "id": "002",
+    "question": "What sets EcoSolution's renewable energy solutions apart from others on the market??",
+    "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce viverra ac erat id molestie. Mauris euismod lobortis ex, id suscipit nibh finibus sodales. Nulla facilisi. Vestibulum eget ante at diam sodales iaculis. Nunc elementum vitae lectus ac bibendum. Fusce ullamcorper malesuada dictum. Suspendisse scelerisque lorem commodo fringilla dictum. Nam quis porta nisl. Phasellus imperdiet tortor quis viverra vehicula. In porta malesuada diam, ut rhoncus eros."
+  },{
+    "id": "003",
+    "question": "How can businesses and communities benefit from integrating renewable energy solutions from EcoSolution?",
+    "answer": "Vivamus velit nisl, rutrum imperdiet sem eget, posuere accumsan massa. Aliquam erat volutpat. In in posuere purus. Mauris at viverra dolor. Pellentesque ut sodales sem. Maecenas porta magna eget quam congue laoreet. Sed feugiat id metus in finibus. In ac nisl ex. Curabitur convallis lectus eros, ut pretium quam accumsan eu. Etiam sollicitudin risus ut tempor placerat."
+  },{
+    "id": "004",
+    "question": "What measures does EcoSolution take to ensure the environmental sustainability of its products?",
+    "answer": "Integer gravida posuere diam ut commodo. Curabitur rhoncus nec dui in vehicula. Vestibulum at turpis at arcu tristique porta sed sed velit. Quisque mauris risus, mollis vitae nulla eget, imperdiet sollicitudin nibh. Nullam blandit tortor interdum massa accumsan vulputate. Mauris at posuere turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas sit amet nisl lacus. Vivamus ullamcorper iaculis luctus. Etiam vel rutrum libero. Donec sed ligula et purus pellentesque eleifend. Aenean in lobortis mi. Vestibulum tristique diam enim."
+  },{
+    "id": "005",
+    "question": "How does EcoSolution engage with local communities and support a just transition to renewable energy?",
+    "answer": "Mauris at diam eget urna congue dignissim nec ac dui. Mauris condimentum scelerisque orci sed porta. Suspendisse auctor vestibulum nisi. Pellentesque sit amet dui mollis, tempor urna id, eleifend arcu. Nulla in condimentum lorem. Vivamus non mi erat. Suspendisse lorem ipsum, aliquam at lectus nec, congue luctus lorem. Etiam pharetra lectus ipsum, eget dignissim ante sodales mattis. Curabitur sit amet urna diam. Duis eu velit sem. In commodo nec ipsum et dapibus. Duis tempor ligula ut libero commodo aliquet. Nullam eu dapibus enim. Phasellus sapien nibh, varius eget diam ac, rutrum congue nibh. Pellentesque elementum elementum massa vel aliquet."
+  }
+]

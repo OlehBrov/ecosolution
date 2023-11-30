@@ -1,3 +1,4 @@
+import { Adress } from "../../components/Adress";
 import { LinkArrow } from "../../components/LinkArrow";
 
 export const HeroSection = () => {
@@ -8,11 +9,14 @@ export const HeroSection = () => {
         Development and implementation of renewable non-polluting energy
         sources, generating power generation using energy wind, sun, water,
         biomass
-          </p>
-          <a href="#" className="hero-link">Learn more <LinkArrow /></a>
-          <div className="separator"></div>
-          <a href="https://maps.app.goo.gl/273JL63UX9UNxkFg9" target="_blank" rel="noopener noreferrer" className="contact-link">79005, Ukraine, Lvivstreet. Shota Rustaveli, 7</a>
-          <a href="mailto:office@ecosolution.com" className="contact-link">office@ecosolution.com</a>
+      </p>
+      <a href="#" className="hero-link">
+        Learn more <LinkArrow />
+      </a>
+      <div className="separator"></div>
+      {/* <a href="https://maps.app.goo.gl/273JL63UX9UNxkFg9" target="_blank" rel="noopener noreferrer" className="contact-link">79005, Ukraine, Lvivstreet. Shota Rustaveli, 7</a>
+          <a href="mailto:office@ecosolution.com" className="contact-link">office@ecosolution.com</a> */}
+      <Adress />
     </div>
   );
 };

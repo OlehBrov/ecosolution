@@ -3,16 +3,23 @@
 @import url("./_header.scss");
 @import url("./_hero.scss");
 @import url("./_introduction.scss");
-@import url('./_values.scss');
-@import url('./_production.scss');
-@import url('./_cases.scss');
-
+@import url("./_values.scss");
+@import url("./_production.scss");
+@import url("./_cases.scss");
+@import url("./_faq.scss");
+@import url("./_customers.scss");
+@import url("./_contacts.scss");
+@import url("./_contact-form.scss");
+@import url('./_footer.scss');
+// * {
+//   outline: 1px solid #f00 !important;
+// }
 body {
   background: #f3f5fa;
   margin: 0;
   color: #173d33;
 }
-ul{
+ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -39,7 +46,10 @@ a {
   text-decoration: none;
   color: #173d33;
 }
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
   margin: 0;
   margin-block: 0;
 }
@@ -53,4 +63,17 @@ h1, h2, h3, p {
   /* 100% */
   text-transform: uppercase;
   margin-bottom: 24px;
+}
+.adress-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.adress-block .contact-link {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.64px;
+  text-align: center;
+  font-style: normal;
+  display: block;
 }

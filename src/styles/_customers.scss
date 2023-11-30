@@ -1,0 +1,19 @@
+.container.customers-container{
+    padding-top: 36px;
+}
+.customers-wrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
+}
+
+.customer-card{
+    display: flex;
+    flex-wrap: wrap;
+    background: #EAEDF1;
+    padding: 16px;
+    height: 116px;
+    & svg{
+        align-self: center;
+    }
+}
