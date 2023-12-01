@@ -12,7 +12,7 @@ export const ProductionSection = () => {
       <h2 className="section-heading production-heading">
         The services we provide
       </h2>
-      <dev className="services-wrap">
+      <div className="services-wrap">
         <div className="description-wrap">
           <p className="services-description">
             Development and implementation of renewable enviroMentally friendly
@@ -48,7 +48,7 @@ export const ProductionSection = () => {
             </li>
           </ul>
         </div>
-      </dev>
+      </div>
     </div>
   );
 };

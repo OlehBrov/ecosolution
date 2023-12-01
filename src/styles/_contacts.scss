@@ -2,8 +2,9 @@
   padding-top: 36px;
 }
 .address-wrap {
-  display: grid;
+  display: flex;
   gap: 24px;
+  flex-direction: column;
 }
 .contacts-name {
   text-align: justify;
@@ -23,7 +24,10 @@
   align-items: center;
   gap: 8px;
 }
-
+.address-data{
+  display: flex;
+  flex-direction: column;
+}
 .address-socials {
   display: flex;
   gap: 8px;
