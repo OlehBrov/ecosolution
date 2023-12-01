@@ -1,5 +1,24 @@
 .container.faq-container {
   // padding-top: 36px;
+  @media screen and (min-width: $tablet) {
+    padding-top: 127px;
+  }
+}
+.grid-wrapper {
+  @media screen and (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 24px;
+    grid-template-areas:
+      "Text Heading"
+      "Text link";
+  }
+}
+.faq-heading {
+  @media screen and (min-width: $tablet) {
+    grid-area: Heading;
+  }
 }
 .accordion {
   display: flex;
@@ -14,6 +33,10 @@
   gap: 32px;
   margin-top: 41px;
   margin-bottom: 36px;
+  @media screen and (min-width: $tablet) {
+    grid-area: Text;
+    margin-top: 20px;
+  }
 }
 .accordion__heading {
   font-size: 18px;
@@ -46,6 +69,10 @@
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
+  @media screen and (min-width: $tablet) {
+    grid-area: link;
+    align-self: flex-end;
+  }
 }
 .prompt-text {
   text-align: justify;

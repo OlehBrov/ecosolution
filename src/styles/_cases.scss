@@ -5,8 +5,46 @@
   }
 }
 .section-heading.cases-heading {
+  position: relative;
   margin-bottom: 24px;
   max-width: 264px;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: -60px;
+    &::after{
+          content: "";
+            position: absolute;
+            top: 0px;
+            right: -90px;
+            display: block;
+            width: 1px;
+            height: 100%;
+            background-color: #97d28b;
+    }
+  }
+}
+// .react-multi-carousel-track{
+//   gap: 20px;
+// }
+.react-multi-carousel-list .react-multi-carousel-track {
+  padding-top: 100px;
+  @media screen and (min-width: $tablet ) {
+    padding-top: 150px;
+  }
+}
+.react-multi-carousel-item {
+  @media screen and (min-width: $tablet) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+// .react-multi-carousel-item {
+//   @media screen and (min-width: $tablet) {
+//     margin-right: 28px;
+//   }
+// }
+
+.case-card-wrapper {
+  overflow: hidden;
 }
 .case-image {
   display: block;
@@ -19,7 +57,7 @@
 
 .case-data-wrap {
   padding: 0px 12px 12px 12px;
-  background: #EAEDF1;
+  background: #eaedf1;
 }
 .case-name-wrap {
   display: flex;
@@ -116,10 +154,12 @@
   & .total-slides-number {
     color: rgba(23, 61, 51, 0.25);
   }
+  @media screen and (min-width: $tablet) {
+    left: calc(50% + 9px);
+    top: 35px;
+  }
 }
-.react-multi-carousel-list .react-multi-carousel-track {
-  padding-top: 100px;
-}
+
 .slide-btn {
   position: absolute;
   top: 0px;
@@ -127,7 +167,7 @@
   display: flex;
   background: none;
   border-radius: 100px;
-  border: 3px solid #173d33;
+  border: 1px solid #173d33;
   padding: 15px;
 }
 .next-slide-btn {

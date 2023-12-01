@@ -12,7 +12,7 @@ export const ContactForm = () => {
     message: Yup.string(),
   });
   return (
-    <div className="container contact-form-container">
+    
       <Formik
         initialValues={{
           fullName: "",
@@ -95,6 +95,6 @@ export const ContactForm = () => {
           </Form>
         )}
       </Formik>
-    </div>
+    
   );
 };

@@ -11,7 +11,7 @@ import { Cases } from "./sections/cases/Cases";
 import { FaqSection } from "./sections/faq/FaqSection";
 import { CustomersSection } from "./sections/ourCustomers/CustomersSection";
 import { ContactUsSection } from "./sections/contactUs/ContactUsSection";
-import { ContactForm } from "./sections/contactForm/ContactForm";
+
 import { Footer } from "./sections/footer/Footer";
 import { BurgerMenu } from "./components/BurgerMenu";
 import gsap from "gsap";
@@ -73,7 +73,7 @@ function App() {
       <FaqSection />
       <CustomersSection currentScreen={currentScreen} />
       <ContactUsSection />
-      <ContactForm />
+     
       <Footer />
     </>
   );

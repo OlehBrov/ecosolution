@@ -3,21 +3,30 @@ import { useEffect, useState } from "react";
 import data from "../../data/cases.json";
 import { BtnArrow } from "../../components/BtnArrow";
 import { LinkArrow } from "../../components/LinkArrow";
-import { breakpoints } from "../../utils/mediaConstants";
+
 import Carousel from "react-multi-carousel";
 // import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import "react-multi-carousel/lib/styles.css";
 import { LeftButton } from "../../components/carousel/LeftButton";
 import { RightButton } from "../../components/carousel/RightButton";
+import { breakpoints } from "../../utils/mediaConstants";
 
 export const Cases = ({ currentScreen }) => {
   const [cases, setCases] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [showPartial, setShowPartial] = useState(false);
 
   useEffect(() => {
     setCases(data);
   }, []);
-
+  useEffect(() => {
+    if (
+      currentScreen === breakpoints.wMobile ||
+      currentScreen === breakpoints.wSemiMobile
+    ) {
+      setShowPartial(false);
+    } else  setShowPartial(true)
+  }, [currentScreen]);
   const counter = (nextSlide, { currentSlide, onMove }, direction) => {
     if (nextSlide > currentSlide) {
       if (currentSlide > cases.length) {
@@ -52,6 +61,7 @@ export const Cases = ({ currentScreen }) => {
             nonMobile: {
               breakpoint: { max: 4000, min: 768 },
               items: 2,
+              partialVisibilityGutter: 50,
             },
             mobile: {
               breakpoint: { max: 768, min: 0 },
@@ -66,6 +76,8 @@ export const Cases = ({ currentScreen }) => {
           arrows={true}
           renderArrowsWhenDisabled={true}
           beforeChange={counter}
+          partialVisbile={showPartial}
+          
         >
           {cases.map((el) => (
             <div key={el.id} className="case-card-wrapper">

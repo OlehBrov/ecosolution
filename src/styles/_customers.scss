@@ -1,10 +1,26 @@
 .container.customers-container{
     padding-top: 36px;
+    @media screen and (min-width: $tablet) {
+        padding-top: 100px;
+    }
+}
+
+.section-heading.customers-heading{
+    @media screen and (min-width: $tablet) {
+        max-width: 341px;
+        text-align: center;
+        margin: 0 auto 40px;
+        
+    }
+    
 }
 .customers-wrap{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 16px;
+    @media screen and (min-width: $tablet) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
 
 .customer-card{

@@ -13,7 +13,7 @@ export const CustomersSection = ({ currentScreen }) => {
   console.log("customers", customers);
   return (
     <div className="container customers-container">
-      <h2 className="section-heading">our satisfied customers</h2>
+      <h2 className="section-heading customers-heading">our satisfied customers</h2>
       <div className="customers-wrap">
         {customers &&
           customers.map(({ id, title, Elem }) => {

@@ -23,32 +23,36 @@ export const FaqSection = () => {
   };
   return (
     <div className="container faq-container">
-      <h2 className="section-heading">Frequently Asked Questions</h2>
-      <Accordion
-        onChange={buttonHandler}
-        preExpanded={["001"]}
-        allowZeroExpanded={true}
-      >
-        {faqData.map((el) => (
-          <AccordionItem key={el.id} uuid={el.id}>
-            <AccordionItemHeading>
-              <AccordionItemButton>
-                {el.question}
-                <AccordionItemState>
-                  {({ expanded }) => (expanded ? <Collapse /> : <Cross />)}
-                </AccordionItemState>
-              </AccordionItemButton>
-            </AccordionItemHeading>
-            <AccordionItemPanel>
-              <p>{el.answer}</p>
-            </AccordionItemPanel>
-          </AccordionItem>
-        ))}
-      </Accordion>
-      <div className="prompt-wrap">
-        <p className="prompt-text">Didn't find the answer to your question? </p>
-        {/* <a href="#" className="contact-btn">Contact Us<span className="circle"></span> </a> */}
-        <InTouchBtn />
+      <div className="grid-wrapper">
+        <h2 className="section-heading faq-heading">Frequently Asked Questions</h2>
+        <Accordion
+          onChange={buttonHandler}
+          preExpanded={["001"]}
+          allowZeroExpanded={true}
+        >
+          {faqData.map((el) => (
+            <AccordionItem key={el.id} uuid={el.id}>
+              <AccordionItemHeading>
+                <AccordionItemButton>
+                  {el.question}
+                  <AccordionItemState>
+                    {({ expanded }) => (expanded ? <Collapse /> : <Cross />)}
+                  </AccordionItemState>
+                </AccordionItemButton>
+              </AccordionItemHeading>
+              <AccordionItemPanel>
+                <p>{el.answer}</p>
+              </AccordionItemPanel>
+            </AccordionItem>
+          ))}
+        </Accordion>
+        <div className="prompt-wrap">
+          <p className="prompt-text">
+            Didn't find the answer to your question?{" "}
+          </p>
+          {/* <a href="#" className="contact-btn">Contact Us<span className="circle"></span> </a> */}
+          <InTouchBtn />
+        </div>
       </div>
     </div>
   );

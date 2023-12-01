@@ -39,7 +39,7 @@ export const ValuesGallery = ({ currentScreen }) => {
             );
           } else {
             return (
-              <div
+              <div  key={val.id}
                 className={`values-card-wrap values-card-wrap_${index} values-image-wrap`}
               >
                 <img src={val.image} alt={val.name} className="value-img" />
