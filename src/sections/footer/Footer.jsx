@@ -1,8 +1,8 @@
 import { BtnArrow } from "../../components/BtnArrow";
 import { LogoText } from "../../components/LogoText";
-import { EmailLink } from "../../components/adressLinks/EmailLink";
-import { LocaleLink } from "../../components/adressLinks/LocaleLink";
-import { SocialsLink } from "../../components/adressLinks/SocialsLink";
+import { EmailLink } from "../../components/addressLinks/EmailLink";
+import { LocaleLink } from "../../components/addressLinks/LocaleLink";
+import { SocialsLink } from "../../components/addressLinks/SocialsLink";
 
 export const Footer = () => {
   return (

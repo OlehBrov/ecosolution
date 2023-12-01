@@ -4,17 +4,10 @@ import { LogoText } from "../../components/LogoText";
 import { MenuBtn } from "../../components/MenuBtn";
 import { Logo } from "../../images/logo";
 import gsap from "gsap";
+import { breakpoints } from "../../utils/mediaConstants";
+import { InTouchBtn } from "../../components/InTouchBtn";
 
-export const Header = () => {
-  const [menuIsOpen, SetMenuIsOpen] = useState(false);
-
-  const showMenu = gsap.timeline({ duration: 2 });
-  showMenu.to(".burger-container", { yPercent: 100 });
-  const burgerMenuBtnHandler = (e) => {
-    console.log("func", e);
-    SetMenuIsOpen((prev) => !prev);
-    showMenu.play()
-  };
+export const Header = ({ burgerMenuHandler, screen }) => {
   return (
     <header>
       <div className="container header-container">
@@ -23,8 +16,10 @@ export const Header = () => {
           <p className="header-span">GREENERGY FOR LIFE</p>
         </a> */}
         <LogoText />
-        <MenuBtn burgerMenuBtnHandler={burgerMenuBtnHandler} />
-        <BurgerMenu showMenu={ showMenu} />
+        <MenuBtn burgerMenuHandler={burgerMenuHandler} />
+        {screen === breakpoints.wTablet || screen === breakpoints.wDesktop ? (
+          <InTouchBtn />
+        ) : null}
       </div>
     </header>
   );

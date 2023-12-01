@@ -1,10 +1,41 @@
-.hero-container {
+.container.hero-container {
+  position: relative;
   display: flex;
   flex-direction: column;
+  padding-top: 222px;
+  padding-bottom: 24px;
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 30px;
+    right: 30px;
+    height: 1px;
+    background: #97d28b;
+  }
+}
+.hero-text {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.hero-heading-wrap {
+  @media screen and (min-width: $tablet) {
+    width: 39%;
+  }
 }
 
-.heading {
-  margin-top: 50%;
+.hero-text-wrap {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: $tablet) {
+    width: 44%;
+  }
+}
+.heading.section-heading {
+  // margin-top: 50%;
 
   font-family: "Oswald";
   font-size: 36px;
@@ -13,15 +44,22 @@
   line-height: 36px;
   /* 100% */
   text-transform: uppercase;
+  @media screen and (min-width: $tablet) {
+    font-size: 48px;
+    line-height: 48px;
+    /* 100% */
+  }
 }
 .paragraph {
-  text-align: justify;
   font-family: "Fira Sans", sans-serif;
   font-size: 16px;
   font-style: normal;
 
   line-height: normal;
   letter-spacing: -0.64px;
+  @media screen and (min-width: $tablet) {
+    text-align: justify;
+  }
 }
 .hero-link {
   display: inline-flex;
@@ -37,6 +75,9 @@
   line-height: 18px;
   /* 112.5% */
   letter-spacing: -0.64px;
+  @media screen and (min-width: $tablet) {
+    margin-left: 0;
+  }
 }
 .link-arrow_wrap {
   border-radius: 50%;

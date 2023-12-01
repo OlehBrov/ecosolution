@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import CountUp from 'react-countup';
+import CountUp from "react-countup";
 
 export const Counter = () => {
   const countUpRef = useRef(null);
@@ -7,10 +7,14 @@ export const Counter = () => {
   return (
     <CountUp
       ref={countUpRef}
+      startOnMount={false}
       start={100000}
       end={1134147814}
       duration={2.75}
       separator=" "
+      enableScrollSpy={true}
+      scrollSpyDelay={300}
+      scrollSpyOnce={true}
       onEnd={() => console.log("Ended! 👏")}
       onStart={() => console.log("Started! 💨")}
     >

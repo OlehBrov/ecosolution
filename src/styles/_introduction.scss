@@ -1,16 +1,45 @@
-// .intro-img{
-//     width: 100%;
-// }
-
+.intro-address-wrap {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  & .contact-wrap .contacts-contact-link {
+    font-family: "Fira Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.64px;
+  }
+}
 .img-wrap {
-  width: 100%;
-  height: 316px;
-  background: url("../images/wind-turbine-clean-energy.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  overflow: hidden;
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+.introduction-img {
+  width: -webkit-fill-available;
+}
+// .img-wrap {
+//   width: 100%;
+//   height: 316px;
+//   background: url("../images/wind-turbine-clean-energy.png");
+//   background-repeat: no-repeat;
+//   background-size: contain;
+//   background-position: center;
+// }
+.about-team-wrap {
+  @media screen and (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    & .section-heading {
+      padding-left: 11px;
+      text-align: justify;
+    }
+  }
 }
 .intro-article {
+  position: relative;
   font-family: "Fira Sans";
   font-size: 16px;
   font-style: normal;
@@ -18,6 +47,21 @@
   line-height: normal;
   letter-spacing: -0.64px;
   text-align: justify;
+  @media screen and (min-width: $tablet) {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    padding-right: 55px;
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 1px;
+      height: 100%;
+      background: #97d28b;
+      top: 0;
+      right: 0;
+    }
+  }
 }
 .team-cards-grid {
   margin-top: 36px;
@@ -25,6 +69,10 @@
   grid-template-columns: 1fr 1fr;
 
   grid-gap: 24px;
+  @media screen and (min-width: $tablet) {
+    margin-top: 96px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .grid-photo {
@@ -33,7 +81,7 @@
 }
 
 .grid-name {
-  font-family: Fira Sans;
+  font-family: "Fira Sans";
   font-size: 18px;
   font-style: normal;
 

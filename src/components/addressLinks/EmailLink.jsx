@@ -4,7 +4,7 @@ export const EmailLink = ({ showlabel = true }) => {
   return (
     <div className="contact-wrap email-contact">
       {showlabel && <p className="contacts-name">Email:</p>}
-      <address className="adress-email">
+      <address className="address-data address-email">
         <a
           href="mailto:office@ecosolution.com"
           className="contacts-contact-link"

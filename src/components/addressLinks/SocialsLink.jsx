@@ -6,7 +6,7 @@ export const SocialsLink = ({ showlabel = true }) => {
     <div className="contact-wrap socials-contact">
      {showlabel && <p className="contacts-name">Social Networks:</p>}
 
-      <address className="adress-socials">
+      <address className=" address-socials">
         <a
           href="http://facebook.com"
           target="_blank"

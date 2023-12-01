@@ -1,6 +1,8 @@
+
+
 export const Adress = () => {
   return (
-    <address className="adress-block">
+    <address className="address-block">
       <a
         href="https://maps.app.goo.gl/273JL63UX9UNxkFg9"
         target="_blank"

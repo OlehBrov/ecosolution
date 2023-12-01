@@ -1,7 +1,23 @@
 .container.production-container {
   padding-top: 36px;
+  @media screen and (min-width: $tablet) {
+    padding-top: 121px;
+  }
 }
 .production-heading {
+  margin: 0 auto;
+  text-align: center;
+  @media screen and (min-width: $tablet) {
+    width: 368px;
+  }
+}
+.production-heading:nth-of-type(2) {
+  @media screen and (min-width: $tablet) {
+    width: 186px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 248px;
+  }
 }
 .counter-section {
   position: relative;
@@ -54,9 +70,20 @@
     /* 100% */
   }
 }
+
+.services-wrap {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
 .description-wrap {
   padding: 52px 18px;
   background: #eaedf1;
+  @media screen and (min-width: $tablet) {
+    width: 50%;
+  }
 }
 .services-description {
   font-family: "Oswald";
@@ -66,14 +93,24 @@
   line-height: 36px;
   /* 100% */
   text-transform: uppercase;
+  @media screen and (min-width: $tablet) {
+    font-size: 40px;
+
+    line-height: 40px;
+    /* 100% */
+  }
 }
 .services-nav {
   display: flex;
   justify-content: center;
-  padding: 24px 0 36px 0;
+  padding-top: 24px;
   background-image: url(../images/energy-bg.png);
   background-repeat: no-repeat;
   background-position: center;
+  @media screen and (min-width: $tablet) {
+    width: 50%;
+    align-items: center;
+  }
 }
 .services-list {
   //    justify-content: center;
@@ -95,4 +132,9 @@
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.8px;
+  @media screen and (min-width: $tablet) {
+    font-size: 24px;
+
+    letter-spacing: -0.96px;
+  }
 }

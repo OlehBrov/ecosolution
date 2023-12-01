@@ -11,6 +11,7 @@ import {
 import data from "../../data/faq.json";
 import { Cross } from "../../images/Cross";
 import { Collapse } from "../../images/Collapse";
+import { InTouchBtn } from "../../components/InTouchBtn";
 
 export const FaqSection = () => {
   const [faqData, setFaqData] = useState([]);
@@ -23,7 +24,11 @@ export const FaqSection = () => {
   return (
     <div className="container faq-container">
       <h2 className="section-heading">Frequently Asked Questions</h2>
-      <Accordion onChange={buttonHandler} preExpanded={['001']} allowZeroExpanded={true}>
+      <Accordion
+        onChange={buttonHandler}
+        preExpanded={["001"]}
+        allowZeroExpanded={true}
+      >
         {faqData.map((el) => (
           <AccordionItem key={el.id} uuid={el.id}>
             <AccordionItemHeading>
@@ -39,11 +44,12 @@ export const FaqSection = () => {
             </AccordionItemPanel>
           </AccordionItem>
         ))}
-          </Accordion>
-          <div className="prompt-wrap">
-              <p className="prompt-text">Didn't find the answer to your question? </p>
-              <a href="#" className="contact-btn">Contact Us <span className="circle"></span> </a>
-          </div>
+      </Accordion>
+      <div className="prompt-wrap">
+        <p className="prompt-text">Didn't find the answer to your question? </p>
+        {/* <a href="#" className="contact-btn">Contact Us<span className="circle"></span> </a> */}
+        <InTouchBtn />
+      </div>
     </div>
   );
 };

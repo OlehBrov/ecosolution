@@ -4,7 +4,7 @@ export const PhoneLink = ({ showlabel = true }) => {
   return (
     <div className="contact-wrap phone-contact">
       {showlabel && <p className="contacts-name">Phone:</p>}
-      <address className="adress-phone">
+      <address className="address-data address-phone">
         <a href="tel:+380981234567" className="contacts-contact-link">
           {showlabel && <Phone />}38 (098) 123 45 67
         </a>

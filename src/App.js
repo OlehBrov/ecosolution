@@ -13,6 +13,8 @@ import { CustomersSection } from "./sections/ourCustomers/CustomersSection";
 import { ContactUsSection } from "./sections/contactUs/ContactUsSection";
 import { ContactForm } from "./sections/contactForm/ContactForm";
 import { Footer } from "./sections/footer/Footer";
+import { BurgerMenu } from "./components/BurgerMenu";
+import gsap from "gsap";
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState(breakpoints.wMobile);
@@ -33,20 +35,46 @@ function App() {
   useEffect(() => {
     screenMatcher(window.screen.width);
   }, []);
+  const [menuIsOpen, SetMenuIsOpen] = useState(false);
 
+  const menuTl = gsap.timeline(
+    gsap.timeline({
+      paused: true,
+      defaults: { duration: 0.3, ease: "power1.inOut" },
+    })
+  );
+  menuTl.fromTo(
+    ".burger-container",
+    {
+      xPercent: 100,
+    },
+    { xPercent: 0 }
+  );
+
+  const burgerMenuHandler = () => {
+    console.log("func");
+    if (!menuIsOpen) {
+      menuTl.play();
+      SetMenuIsOpen(true);
+    } else {
+      menuTl.reverse();
+      SetMenuIsOpen(false);
+    }
+  };
   return (
     <>
-      <Header />
+      {/* <BurgerMenu burgerMenuHandler={burgerMenuHandler} /> */}
+      <Header burgerMenuHandler={burgerMenuHandler} screen={currentScreen} />
       <HeroSection />
       <IntroductionSection />
       <ValuesSection currentScreen={currentScreen} />
       <ProductionSection />
-      <Cases />
+      <Cases currentScreen={currentScreen}/>
       <FaqSection />
       <CustomersSection currentScreen={currentScreen} />
       <ContactUsSection />
       <ContactForm />
-      <Footer/>
+      <Footer />
     </>
   );
 }

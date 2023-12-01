@@ -6,7 +6,7 @@ export const ValuesGallery = ({ currentScreen }) => {
   const [values, setValues] = useState([]);
 
   useEffect(() => {
-    if (window.screen.width < breakpoints.wSemiMobile) {
+    if (window.screen.width < breakpoints.wTablet) {
       setValues(
         data.filter((el) => {
           return el.hasOwnProperty("name");
@@ -18,20 +18,35 @@ export const ValuesGallery = ({ currentScreen }) => {
   }, [currentScreen]);
 
   return (
-    <div className="team-cards-grid">
+    <div className="team-cards-grid values-cards-grid">
       {values.length &&
-        values.map((val) => (
-          <div key={val.id} className="card-wrap">
-            <div className="card-head">
-              <img src={val.image} alt={val.name} className="grid-icon" />
-              <p className="grid-name value-name" data-url={val.image}>
-                {val.name}
-              </p>
-            </div>
+        values.map((val, index) => {
+          if (val.hasOwnProperty("name")) {
+            return (
+              <div
+                key={val.id}
+                className={`values-card-wrap values-card-wrap_${index}`}
+              >
+                <div className="card-head">
+                  <img src={val.image} alt={val.name} className="grid-icon" />
+                  <p className="value-name" data-url={val.image}>
+                    {val.name}
+                  </p>
+                </div>
 
-            <p className="grid-position value-descr">{val.text}</p>
-          </div>
-        ))}
+                <p className="value-descr">{val.text}</p>
+              </div>
+            );
+          } else {
+            return (
+              <div
+                className={`values-card-wrap values-card-wrap_${index} values-image-wrap`}
+              >
+                <img src={val.image} alt={val.name} className="value-img" />
+              </div>
+            );
+          }
+        })}
     </div>
   );
 };

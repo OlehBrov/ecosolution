@@ -1,24 +1,33 @@
 @import-normalize;
-@import url("../font/_font.scss");
-@import url("./_header.scss");
-@import url('./_burger-menu.scss');
-@import url("./_hero.scss");
-@import url("./_introduction.scss");
-@import url("./_values.scss");
-@import url("./_production.scss");
-@import url("./_cases.scss");
-@import url("./_faq.scss");
-@import url("./_customers.scss");
-@import url("./_contacts.scss");
-@import url("./_contact-form.scss");
-@import url('./_footer.scss');
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1280px;
+
+@import "../font/_font.scss";
+@import "./_header.scss";
+@import "./_burger-menu.scss";
+@import "./_hero.scss";
+@import "./_introduction.scss";
+@import "./_values.scss";
+@import "./_production.scss";
+@import "./_cases.scss";
+@import "./_faq.scss";
+@import "./_customers.scss";
+@import "./_contacts.scss";
+@import "./_contact-form.scss";
+@import "./_footer.scss";
+
 // * {
 //   outline: 1px solid #f00 !important;
 // }
+* {
+  box-sizing: border-box;
+}
 body {
   background: #f3f5fa;
   margin: 0;
   color: #173d33;
+  position: relative;
 }
 ul {
   list-style: none;
@@ -29,8 +38,10 @@ ul {
   margin: 0 auto;
 
   position: relative;
-
-  padding: 0 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  // padding: 0 20px;
+  width: 100%;
 
   @media screen and (min-width: 480px) {
     width: 480px;
@@ -64,17 +75,29 @@ p {
   /* 100% */
   text-transform: uppercase;
   margin-bottom: 24px;
+  @media screen and (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 48px;
+    line-height: 48px;
+  }
 }
-.adress-block {
+.address-block {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.adress-block .contact-link {
+.address-block .contact-link {
   font-family: "Fira Sans", sans-serif;
   font-size: 16px;
   letter-spacing: -0.64px;
   text-align: center;
   font-style: normal;
   display: block;
+}
+.address-data {
+  display: flex;
+  justify-content: center;
 }

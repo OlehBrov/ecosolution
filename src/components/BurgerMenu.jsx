@@ -1,9 +1,9 @@
-import { SocialsLink } from "./adressLinks/SocialsLink";
+import { SocialsLink } from "./addressLinks/SocialsLink";
 
-export const BurgerMenu = ({showMenu}) => {
+export const BurgerMenu = ({burgerMenuHandler}) => {
   return (
     <div className="burger-container">
-      <button type="button" onClick={()=>showMenu.reverse()}>Close</button>
+      <button type="button" onClick={burgerMenuHandler}>Close</button>
       <ul className="burger-menu-list">
         <li className="burger-menu-item">
           <a href="#">Main</a>

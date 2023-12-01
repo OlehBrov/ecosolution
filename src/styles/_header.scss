@@ -1,14 +1,24 @@
-header{
-    position: fixed;
-    width: 100%;
-    background: #f3f5fa;
-    z-index: 1;
+header {
+  position: fixed;
+  // width: 100%;
+  background: #f3f5fa;
+  z-index: 1;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
 }
 .container.header-container {
+  padding-top: 14px;
+  padding-bottom: 14px;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   position: relative;
-
+  @media screen and (min-width: $tablet) {
+    & .contact-btn {
+      margin-left: 12px;
+    }
+  }
 }
 
 .header-link {

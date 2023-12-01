@@ -1,5 +1,12 @@
+.container.cases-container {
+  padding-top: 36px;
+  @media screen and (min-width: $tablet) {
+    padding-top: 100px;
+  }
+}
 .section-heading.cases-heading {
   margin-bottom: 100px;
+  max-width: 264px;
 }
 .case-image {
   width: 320px;
@@ -7,8 +14,8 @@
   flex-shrink: 0;
 }
 
-.case-data-wrap{
-    padding: 0px 12px 12px 12px;
+.case-data-wrap {
+  padding: 0px 12px 12px 12px;
 }
 .case-name-wrap {
   display: flex;
@@ -72,8 +79,6 @@
 .carousel .carousel {
   position: relative;
 }
-
-
 
 .carousel.carousel-slider {
   position: relative;
