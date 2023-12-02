@@ -12,6 +12,10 @@
     line-height: normal;
     letter-spacing: -0.64px;
   }
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .img-wrap {
   overflow: hidden;
@@ -36,6 +40,13 @@
     & .section-heading {
       padding-left: 11px;
       text-align: justify;
+      @media screen and (min-width: $desktop) {
+        width: 458px;
+        padding-left: 0px;
+        margin-right: 0;
+        margin-left: auto;
+        text-align: end;
+      }
     }
   }
 }
@@ -90,6 +101,9 @@
   letter-spacing: -0.72px;
   margin-bottom: 2px;
   margin-top: 10px;
+  @media screen and (min-width: $tablet) {
+    font-size: 20px;
+  }
 }
 .grid-position {
   color: #828382;

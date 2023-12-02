@@ -66,9 +66,9 @@ function App() {
       {/* <BurgerMenu burgerMenuHandler={burgerMenuHandler} /> */}
       <Header burgerMenuHandler={burgerMenuHandler} screen={currentScreen} />
       <HeroSection />
-      <IntroductionSection />
+      <IntroductionSection currentScreen={currentScreen}/>
       <ValuesSection currentScreen={currentScreen} />
-      <ProductionSection />
+      <ProductionSection currentScreen={currentScreen} />
       <Cases currentScreen={currentScreen}/>
       <FaqSection />
       <CustomersSection currentScreen={currentScreen} />

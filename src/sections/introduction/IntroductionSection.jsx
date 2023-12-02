@@ -1,17 +1,27 @@
 // import turbine from '../../images/wind-turbine-clean-energy.jpg'
 
-import { Adress } from "../../components/Adress";
+import { useEffect, useState } from "react";
 import { TeamGallery } from "../../components/TeamGallery";
 import { EmailLink } from "../../components/addressLinks/EmailLink";
 import { LocaleLink } from "../../components/addressLinks/LocaleLink";
 import { IntroductionImg } from "../../components/srcSets/IntroductionImg";
+import { breakpoints } from "../../utils/mediaConstants";
+import { Copyright } from "../../components/Copyright";
 
-export const IntroductionSection = () => {
+export const IntroductionSection = ({ currentScreen }) => {
+  const [isVisible, setIsVisible] = useState(null);
+  useEffect(() => {
+    if (
+      currentScreen === breakpoints.wMobile ||
+      currentScreen === breakpoints.wSemiMobile
+    ) {
+      setIsVisible(false);
+    } else setIsVisible(true);
+  }, [currentScreen]);
   return (
     <div className=" container intro-container">
       <div className="intro-address-wrap">
-        {/* <Adress /> */}
-        <LocaleLink showlabel={false} /> <EmailLink showlabel={false} />
+        <LocaleLink showlabel={false} /> <EmailLink showlabel={false} /> {isVisible && <Copyright/>}
       </div>
 
       <div className="img-wrap">

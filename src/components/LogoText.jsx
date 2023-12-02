@@ -1,8 +1,8 @@
 import { Logo } from "../images/logo";
 export const LogoText = () => {
   return (
-    <a href="#" className="header-link">
-      {<Logo />} <p>ecosolution</p>  <p className="header-span">GREENERGY FOR LIFE</p>
+    <a href="#" className="company-link">
+      {<Logo />}ecosolution <span className="company-span">GREENERGY FOR LIFE</span>
     </a>
   );
 };

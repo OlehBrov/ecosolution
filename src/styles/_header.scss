@@ -21,9 +21,9 @@ header {
   }
 }
 
-.header-link {
+.company-link {
   text-decoration: none;
-  display: flex;
+  // display: flex;
   align-items: baseline;
   font-family: "CA Saygon Text", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 33px;
@@ -32,7 +32,8 @@ header {
   line-height: normal;
   letter-spacing: -1.32px;
 }
-.header-span {
+.company-span {
+  display: inline-block;
   font-family: "CA Saygon Text", Arial, Helvetica, sans-serif;
   font-size: 10px;
   font-style: normal;

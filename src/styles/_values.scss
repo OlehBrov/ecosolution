@@ -46,6 +46,10 @@
     padding-left: 0;
     padding-right: 100px;
   }
+  @media screen and (min-width: $desktop) {
+    max-width: 365px;
+    padding-right: 0px;
+  }
 }
 .values-cards-grid {
   margin-top: 36px;
@@ -114,6 +118,10 @@
   padding-bottom: 33px;
   border-bottom: 1px solid #97d28b;
   margin-bottom: 12px;
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 94px;
+    margin-bottom: 24px;
+  }
 }
 .value-name {
   position: relative;
@@ -126,12 +134,20 @@
   letter-spacing: -0.72px;
   margin-bottom: 2px;
   margin-top: 10px;
+  @media screen and (min-width: $desktop) {
+    font-size: 32px;
+    line-height: 48px;
+  }
 }
 .grid-icon {
   width: 16px;
   height: 16px;
   //   align-self: center;
   margin-right: 8px;
+  @media screen and (min-width: $desktop) {
+    width: 24px;
+    height: 24px;
+  }
 }
 .value-descr {
   font-size: 14px;
@@ -139,4 +155,7 @@
   letter-spacing: -0.56px;
   color: #828382;
   font-family: "Fira Sans";
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+  }
 }

@@ -3,11 +3,43 @@
   margin-top: 36px;
   padding-bottom: 51px;
 }
-.footer-logo-wrap {
+:where(footer) .contacts-contact-link {
+  font-size: 16px;
+}
+.footer-grid {
   position: relative;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: minmax(20px, auto);
+  // gap: 20px;
+  padding-top: 28px;
+  font-size: 16px;
+  @media screen and (min-width: $tablet) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "logo logo socials"
+      "location email copyright";
+    // justify-items: center;
+    align-items: start;
+    & .company-link {
+      grid-area: logo;
+    }
+    & .socials-contact {
+      grid-area: socials;
+    }
+    & .address-contact {
+      grid-area: location;
+    }
+    & .email-contact {
+      grid-area: email;
+    }
+    & .copyright {
+      grid-area: copyright;
+    }
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -17,8 +49,30 @@
     height: 1px;
     background: #97d28b;
   }
+  & .address-contact,
+  .email-contact {
+    display: grid;
+  }
+  & .socials-contact .address-socials {
+    justify-content: center;
+  }
+  & .address-map,
+  .address-email {
+    align-items: center;
+  }
 }
+
+// .footer-logo-wrap {
+//   position: relative;
+//   display: flex;
+//   align-items: baseline;
+//   justify-content: space-between;
+
+// }
 .footer-link {
+  position: absolute;
+  top: 28px;
+  right: 0;
   width: 32px;
   height: 32px;
   display: inline-flex;
@@ -30,18 +84,18 @@
   gap: 10px;
   transform: rotate(-90deg);
 }
-.footer-contacts {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  justify-content: center;
-  align-items: center;
+// .footer-contacts {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 16px;
+//   justify-content: center;
+//   align-items: center;
 
-  & a {
-    font-size: 16px;
-    letter-spacing: -0.64px;
-  }
-}
+//   & a {
+//     font-size: 16px;
+//     letter-spacing: -0.64px;
+//   }
+// }
 .copyright {
   font-family: "Fira Sans";
   font-size: 16px;
@@ -51,4 +105,7 @@
   letter-spacing: -0.64px;
   margin-top: 16px;
   text-align: center;
+  @media screen and (min-width: $tablet) {
+    margin-top: 0px;
+  }
 }

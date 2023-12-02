@@ -49,6 +49,10 @@
     line-height: 48px;
     /* 100% */
   }
+  @media screen and (min-width: $desktop) {
+    font-size: 64px;
+      line-height: 64px;
+  }
 }
 .paragraph {
   font-family: "Fira Sans", sans-serif;
