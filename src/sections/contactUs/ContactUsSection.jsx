@@ -6,7 +6,7 @@ import { ContactForm } from "../contactForm/ContactForm";
 
 export const ContactUsSection = () => {
   return (
-    <div className="container contact-us-container">
+    <div id="contact-us-section" className="container contact-us-container">
       <h2 className="section-heading contact-us-heading">Contact us</h2>
       <div className="contacts-grid">
         <div className="address-wrap">

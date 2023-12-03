@@ -9,6 +9,10 @@
     max-width: 168px;
     margin-bottom: 40px;
   }
+  @media screen and (min-width: $desktop) {
+    width: 224px;
+    text-wrap: nowrap;
+  }
 }
 .address-wrap {
   display: flex;

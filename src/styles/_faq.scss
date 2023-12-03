@@ -81,6 +81,10 @@
   font-weight: 400;
   letter-spacing: -0.72px;
   margin-bottom: 22px;
+  @media screen and (min-width:$desktop) {
+    text-align: center;
+      width: 100%;
+  }
 }
 .contact-btn {
   display: flex;

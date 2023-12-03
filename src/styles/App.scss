@@ -23,6 +23,12 @@ $desktop: 1280px;
 * {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth
+}
+// #root {
+//   scroll-behavior: smooth;
+// }
 body {
   background: #f3f5fa;
   margin: 0;

@@ -10,15 +10,15 @@
   max-width: 264px;
   @media screen and (min-width: $tablet) {
     margin-bottom: -60px;
-    &::after{
-          content: "";
-            position: absolute;
-            top: 0px;
-            right: -90px;
-            display: block;
-            width: 1px;
-            height: 100%;
-            background-color: #97d28b;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: -90px;
+      display: block;
+      width: 1px;
+      height: 100%;
+      background-color: #97d28b;
     }
   }
 }
@@ -27,7 +27,7 @@
 // }
 .react-multi-carousel-list .react-multi-carousel-track {
   padding-top: 100px;
-  @media screen and (min-width: $tablet ) {
+  @media screen and (min-width: $tablet) {
     padding-top: 150px;
   }
 }
@@ -45,14 +45,22 @@
 
 .case-card-wrapper {
   overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cases-image-wrap {
+  height: 100%;
 }
 .case-image {
-  display: block;
+  // display: block;
   min-width: 320px;
   min-height: 224px;
   flex-shrink: 0;
   width: 100%;
-  height: auto;
+  object-fit: cover;
+  height: 100%;
 }
 
 .case-data-wrap {

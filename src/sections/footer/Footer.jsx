@@ -11,7 +11,7 @@ export const Footer = () => {
       <div className="container footer-container">
         <div className="footer-grid">
           <LogoText />
-          <a href="#" className="footer-link">
+          <a href="#main-section" className="footer-link">
             {" "}
             <BtnArrow height={16} width={16} />
           </a>

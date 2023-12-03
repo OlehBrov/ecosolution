@@ -37,43 +37,50 @@ function App() {
   }, []);
   const [menuIsOpen, SetMenuIsOpen] = useState(false);
 
-  const menuTl = gsap.timeline(
-    gsap.timeline({
-      paused: true,
-      defaults: { duration: 0.3, ease: "power1.inOut" },
-    })
-  );
-  menuTl.fromTo(
-    ".burger-container",
+  const menuTl = gsap.timeline({ paused: true });
+  menuTl.to(".burger-container", {
+    duration: 1,
+    opacity: 1,
+    height: "100vh", // change this to 100vh for full-height menu
+    ease: "expo.inOut",
+    zIndex: 15,
+  });
+  menuTl.from(
+    ".burger-menu-item",
     {
-      xPercent: 100,
+      duration: 1,
+      opacity: 0,
+      y: 0,
+      stagger: 0.1,
+      ease: "expo.inOut",
     },
-    { xPercent: 0 }
+    "-=0.5"
   );
-
+  menuTl.reverse();
   const burgerMenuHandler = () => {
-    console.log("func");
-    if (!menuIsOpen) {
-      menuTl.play();
-      SetMenuIsOpen(true);
-    } else {
-      menuTl.reverse();
-      SetMenuIsOpen(false);
-    }
+    menuTl.reversed(!menuTl.reversed());
+    // console.log("func");
+    // if (!menuIsOpen) {
+    //   menuTl.play();
+    //   SetMenuIsOpen(true);
+    // } else if(menuIsOpen) {
+    //   menuTl.reverse();
+    //   SetMenuIsOpen(false);
+    // }
   };
   return (
     <>
-      {/* <BurgerMenu burgerMenuHandler={burgerMenuHandler} /> */}
+      <BurgerMenu burgerMenuHandler={burgerMenuHandler} />
       <Header burgerMenuHandler={burgerMenuHandler} screen={currentScreen} />
       <HeroSection />
-      <IntroductionSection currentScreen={currentScreen}/>
+      <IntroductionSection currentScreen={currentScreen} />
       <ValuesSection currentScreen={currentScreen} />
       <ProductionSection currentScreen={currentScreen} />
-      <Cases currentScreen={currentScreen}/>
+      <Cases currentScreen={currentScreen} />
       <FaqSection />
       <CustomersSection currentScreen={currentScreen} />
       <ContactUsSection />
-     
+
       <Footer />
     </>
   );

@@ -10,7 +10,7 @@ export const CustomersSection = ({ currentScreen }) => {
       setCustomers(customersCountHandler(2));
     } else setCustomers(customersCountHandler(4));
   }, [currentScreen]);
-  console.log("customers", customers);
+  // console.log("customers", customers);
   return (
     <div className="container customers-container">
       <h2 className="section-heading customers-heading">our satisfied customers</h2>

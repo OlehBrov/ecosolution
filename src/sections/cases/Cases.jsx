@@ -1,21 +1,25 @@
-import { useEffect, useState } from "react";
+import { Children, useEffect, useRef, useState } from "react";
 
 import data from "../../data/cases.json";
-import { BtnArrow } from "../../components/BtnArrow";
+
 import { LinkArrow } from "../../components/LinkArrow";
 
 import Carousel from "react-multi-carousel";
+import { getClones } from "react-multi-carousel/lib/utils/clones";
 // import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { getOriginalCounterPart } from "react-multi-carousel/lib/utils";
 import "react-multi-carousel/lib/styles.css";
 import { LeftButton } from "../../components/carousel/LeftButton";
 import { RightButton } from "../../components/carousel/RightButton";
 import { breakpoints } from "../../utils/mediaConstants";
+import React from "react";
 
 export const Cases = ({ currentScreen }) => {
   const [cases, setCases] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [showPartial, setShowPartial] = useState(false);
-
+  
+  const carouselRef = useRef(null);
   useEffect(() => {
     setCases(data);
   }, []);
@@ -25,24 +29,34 @@ export const Cases = ({ currentScreen }) => {
       currentScreen === breakpoints.wSemiMobile
     ) {
       setShowPartial(false);
-    } else  setShowPartial(true)
+    } else setShowPartial(true);
   }, [currentScreen]);
+
+  //   useEffect(() => {
+  //   setChildrenArray(Children.toArray(carouselRef.current.props.children))
+  // }, [carouselRef])
+
   const counter = (nextSlide, { currentSlide, onMove }, direction) => {
+    console.log("nextSlide", nextSlide);
+    console.log("currentSlide", currentSlide);
+    
     if (nextSlide > currentSlide) {
+      // setCurrentPage(nextSlide + currentSlide - sliderIndex );
+
       if (currentSlide > cases.length) {
         setCurrentPage(currentSlide - cases.length);
       } else {
         setCurrentPage(currentSlide);
       }
-    } else if (currentPage === 1) {
-      setCurrentPage(cases.length);
+    } else if (nextSlide < currentSlide) {
+      setCurrentPage(currentSlide);
     } else {
       setCurrentPage((prev) => prev - 1);
     }
   };
 
   return (
-    <div className="container cases-container">
+    <div id="cases-section" className="container cases-container">
       <h2 className="section-heading cases-heading">
         Successful cases of our company
       </h2>
@@ -57,6 +71,7 @@ export const Cases = ({ currentScreen }) => {
           </span>
         </p>
         <Carousel
+          ref={carouselRef}
           responsive={{
             nonMobile: {
               breakpoint: { max: 4000, min: 768 },
@@ -77,11 +92,14 @@ export const Cases = ({ currentScreen }) => {
           renderArrowsWhenDisabled={true}
           beforeChange={counter}
           partialVisbile={showPartial}
-          
         >
           {cases.map((el) => (
             <div key={el.id} className="case-card-wrapper">
-              <img className="case-image" src={el.image} alt="" />
+              <div className="cases-image-wrap">
+                {" "}
+                <img className="case-image" src={el.image} alt="" />
+              </div>
+
               <div className="case-data-wrap">
                 <div className="case-name-wrap">
                   <p className="case-name">{el.name}</p>
