@@ -6,7 +6,7 @@ import { Instagram } from "./addressLinks/Instagram";
 export const BurgerMenu = ({ burgerMenuHandler }) => {
   return (
     <div className="burger-container">
-      <div className="container mobile-burger-menu-container">
+      <div className="container mobile-burger-menu-container menu-wrapper">
         <div className="burger-menu">
           <button
             className="burger-menu-close-btn burger-menu-item-link"

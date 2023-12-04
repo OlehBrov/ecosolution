@@ -37,17 +37,17 @@ export const LinkArrow = (props) => {
   <path
     d="M10.9976 6.98633L21.0125 6.98633L21.0125 17.0013"
     stroke="#173D33"
-    stroke-width="1.5"
-    stroke-miterlimit="10"
-    stroke-linecap="round"
-    stroke-linejoin="round"
+    strokeWidth="1.5"
+    strokeMiterlimit="10"
+    strokeLinecap="round"
+    strokeLinejoin="round"
   />
   <path
     d="M6.98877 21.0107L20.8728 7.1267"
     stroke="#173D33"
-    stroke-width="1.5"
-    stroke-miterlimit="10"
-    stroke-linecap="round"
-    stroke-linejoin="round"
+    strokeWidth="1.5"
+    strokeMiterlimit="10"
+    strokeLinecap="round"
+    strokeLinejoin="round"
   />
 </svg>;

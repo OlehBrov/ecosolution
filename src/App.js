@@ -16,6 +16,10 @@ import gsap from "gsap";
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState(breakpoints.wMobile);
+  const [menuContainer, setMenuContainer] = useState(null)
+  useEffect(() => {
+   setMenuContainer(document.querySelector(".burger-container"))
+  }, [])
   const screenMatcher = (data) => {
     if (data >= breakpoints.wMobile && data < breakpoints.wSemiMobile) {
       setCurrentScreen(breakpoints.wMobile);
@@ -33,13 +37,13 @@ function App() {
   useEffect(() => {
     screenMatcher(window.screen.width);
   }, []);
-
+  gsap.set(menuContainer, { autoAlpha: 0 });
   const menuTl = gsap.timeline({ paused: true });
 
-  menuTl.to(".burger-container", {
+  menuTl.to(menuContainer, {
     duration: 1,
     opacity: 1,
-    height: "100vh", 
+    height: "100vh",
     ease: "expo.inOut",
     visibility: "visible",
     zIndex: 15,
