@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/ecosolution/static/css/main.ff547726.css",
+    "main.js": "/ecosolution/static/js/main.b7e03af3.js",
+    "static/media/bosch.svg": "/ecosolution/static/media/bosch.b08f42f099d9275b3c8346fe40214d3e.svg",
+    "static/media/audi.svg": "/ecosolution/static/media/audi.b26869fb854ff6136f12bf42d9e1e9ac.svg",
+    "static/media/solar.jpg": "/ecosolution/static/media/solar.3586c97abf87d08b29fa.jpg",
+    "static/media/desktop_wind-turbine.jpg": "/ecosolution/static/media/desktop_wind-turbine.c101be9caf8807a96c85.jpg",
+    "static/media/hydro.jpg": "/ecosolution/static/media/hydro.4ee9c61cdf955d212472.jpg",
+    "static/media/dnipro.svg": "/ecosolution/static/media/dnipro.0e1994a0cd3fefd06dbee4a8e577220d.svg",
+    "static/media/wind.jpg": "/ecosolution/static/media/wind.232e458350bdb7e7ad97.jpg",
+    "static/media/tablet_wind-turbine.jpg": "/ecosolution/static/media/tablet_wind-turbine.097c29a9e38252381a8a.jpg",
+    "static/media/nuclear.jpg": "/ecosolution/static/media/nuclear.7ed4f5b50bb5a6485601.jpg",
+    "static/media/desktop_team-member-1.jpg": "/ecosolution/static/media/desktop_team-member-1.913dae9183a791a7f70f.jpg",
+    "static/media/CASaygonText-Regular.woff": "/ecosolution/static/media/CASaygonText-Regular.ce5d2358110e3d4ead27.woff",
+    "static/media/desktop_team-member-4.jpg": "/ecosolution/static/media/desktop_team-member-4.e9769f02fd61473cb6cd.jpg",
+    "static/media/desktop_team-member-2.jpg": "/ecosolution/static/media/desktop_team-member-2.8a538203ce27a6f2518a.jpg",
+    "static/media/CASaygonText-SemiBold.woff": "/ecosolution/static/media/CASaygonText-SemiBold.c6ce76617ea86774a595.woff",
+    "static/media/desktop_team-member-3.jpg": "/ecosolution/static/media/desktop_team-member-3.988cf38161521910fee5.jpg",
+    "static/media/mobile_wind-turbine.jpg": "/ecosolution/static/media/mobile_wind-turbine.71e23f67af7e1b0dad78.jpg",
+    "static/media/Fontspring-DEMO-allroundgothic-thick.otf": "/ecosolution/static/media/Fontspring-DEMO-allroundgothic-thick.a3cc674d03213c20323d.otf",
+    "static/media/revicons.eot": "/ecosolution/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/ecosolution/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/thermal.jpg": "/ecosolution/static/media/thermal.e5db81f47590dae377d6.jpg",
+    "static/media/buh.svg": "/ecosolution/static/media/buh.68ef455bae71f9206f89d7b6b79f9416.svg",
+    "static/media/revicons.woff": "/ecosolution/static/media/revicons.e8746a624ed098489406.woff",
+    "static/media/call.svg": "/ecosolution/static/media/call.e9e3bee123d3d8648d84ccdd3949c923.svg",
+    "static/media/map.svg": "/ecosolution/static/media/map.07f1d0fbbf21ed2ba5b1036348ab03df.svg",
+    "index.html": "/ecosolution/index.html",
+    "static/media/facebook.svg": "/ecosolution/static/media/facebook.b4a032f3a2fd1253127958e24c6ae68e.svg",
+    "static/media/instagram.svg": "/ecosolution/static/media/instagram.6e44fb60b2bc0188a75401317260801f.svg",
+    "static/media/sms.svg": "/ecosolution/static/media/sms.7cc71491d503b020d8f6054da3c5f250.svg",
+    "static/media/activeDotArrow.svg": "/ecosolution/static/media/activeDotArrow.fcd27c13a74d50c9c6a5.svg",
+    "static/media/close-light.svg": "/ecosolution/static/media/close-light.f9cac21de5db4a342bd7.svg",
+    "main.ff547726.css.map": "/ecosolution/static/css/main.ff547726.css.map",
+    "main.b7e03af3.js.map": "/ecosolution/static/js/main.b7e03af3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff547726.css",
+    "static/js/main.b7e03af3.js"
+  ]
+}
