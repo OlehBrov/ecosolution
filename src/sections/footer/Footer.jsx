@@ -13,7 +13,7 @@ export const Footer = () => {
           <LogoText />
           <a href="#main-section" className="footer-link">
             {" "}
-            <BtnArrow height={16} width={16} />
+            <BtnArrow height={16} width={16} color="#173D33"/>
           </a>
           <SocialsLink showlabel={false} />
           <LocaleLink showlabel={false} />

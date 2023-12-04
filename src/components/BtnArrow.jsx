@@ -1,4 +1,4 @@
-export const BtnArrow = ({height = 36, width = 36}) => {
+export const BtnArrow = ({height = 36, width = 36, color = "#173D3"}) => {
 
 
   return (
@@ -11,7 +11,7 @@ export const BtnArrow = ({height = 36, width = 36}) => {
     >
       <path
         d="M21.6455 8.89355L30.7505 17.9986L21.6455 27.1036"
-        stroke="#173D33"
+        stroke={color}
         strokeWidth="1.5"
         strokeMiterlimit="10"
         strokeLinecap="round"
@@ -19,7 +19,7 @@ export const BtnArrow = ({height = 36, width = 36}) => {
       />
       <path
         d="M5.25098 17.999H30.496"
-        stroke="#173D33"
+        stroke={color}
         strokeWidth="1.5"
         strokeMiterlimit="10"
         strokeLinecap="round"

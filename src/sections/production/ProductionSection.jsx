@@ -64,7 +64,7 @@ export const ProductionSection = ({ currentScreen }) => {
   }, [currentScreen]);
   return (
     <div className="container production-container">
-      <h2 className="section-heading production-heading">
+      <h2 id="services-section" className="section-heading production-heading">
         Electricity we produced for all time
       </h2>
       <div className="counter-section">

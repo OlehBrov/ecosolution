@@ -19,7 +19,7 @@ export const IntroductionSection = ({ currentScreen }) => {
     } else setIsVisible(true);
   }, [currentScreen]);
   return (
-    <div className=" container intro-container">
+    <div id="about-section" className=" container intro-container">
       <div className="intro-address-wrap">
         <LocaleLink showlabel={false} /> <EmailLink showlabel={false} /> {isVisible && <Copyright/>}
       </div>

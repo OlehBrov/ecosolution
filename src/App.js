@@ -38,6 +38,7 @@ function App() {
   const [menuIsOpen, SetMenuIsOpen] = useState(false);
 
   const menuTl = gsap.timeline({ paused: true });
+
   menuTl.to(".burger-container", {
     duration: 1,
     opacity: 1,
@@ -45,32 +46,26 @@ function App() {
     ease: "expo.inOut",
     zIndex: 15,
   });
-  menuTl.from(
-    ".burger-menu-item",
-    {
-      duration: 1,
-      opacity: 0,
-      y: 0,
-      stagger: 0.1,
-      ease: "expo.inOut",
-    },
-    "-=0.5"
-  );
+  // menuTl.from(
+  //   ".burger-menu-item",
+  //   {
+  //     duration: 1,
+  //     opacity: 0,
+  //     y: 0,
+  //     stagger: 0.1,
+  //     ease: "expo.inOut",
+  //   },
+  //   "-=0.5"
+  // );
   menuTl.reverse();
   const burgerMenuHandler = () => {
     menuTl.reversed(!menuTl.reversed());
-    // console.log("func");
-    // if (!menuIsOpen) {
-    //   menuTl.play();
-    //   SetMenuIsOpen(true);
-    // } else if(menuIsOpen) {
-    //   menuTl.reverse();
-    //   SetMenuIsOpen(false);
-    // }
+    document.querySelector("body").classList.toggle("prevent-scroll");
   };
+
   return (
     <>
-      <BurgerMenu burgerMenuHandler={burgerMenuHandler} />
+      
       <Header burgerMenuHandler={burgerMenuHandler} screen={currentScreen} />
       <HeroSection />
       <IntroductionSection currentScreen={currentScreen} />

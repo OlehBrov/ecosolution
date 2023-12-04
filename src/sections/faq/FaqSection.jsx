@@ -23,7 +23,7 @@ export const FaqSection = () => {
   };
   return (
     <div className="container faq-container">
-      <div className="grid-wrapper">
+      <div id="faq-section" className="grid-wrapper">
         <h2 className="section-heading faq-heading">Frequently Asked Questions</h2>
         <Accordion
           onChange={buttonHandler}

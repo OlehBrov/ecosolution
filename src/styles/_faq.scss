@@ -68,7 +68,9 @@
 .prompt-wrap {
   justify-content: center;
   display: flex;
-  flex-wrap: wrap;
+
+  align-items: center;
+  flex-direction: column;
   @media screen and (min-width: $tablet) {
     grid-area: link;
     align-self: flex-end;
@@ -81,9 +83,10 @@
   font-weight: 400;
   letter-spacing: -0.72px;
   margin-bottom: 22px;
-  @media screen and (min-width:$desktop) {
+
+  @media screen and (min-width: $desktop) {
     text-align: center;
-      width: 100%;
+    width: 100%;
   }
 }
 .contact-btn {
@@ -95,6 +98,10 @@
   padding: 10px 16px;
   border-radius: 500px;
   background: #97d28b;
+  transition: 0.3s;
+  &:hover{
+    background:#ceeac8
+  }
 }
 .circle {
   display: block;

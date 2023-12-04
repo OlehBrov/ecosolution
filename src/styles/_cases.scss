@@ -180,10 +180,18 @@
 }
 .next-slide-btn {
   right: 0;
+  transition: 0.3s;
+  &:active {
+      scale: 0.8;
+    }
 }
 .prev-slide-btn {
   transform: rotate(180deg);
   right: 80px;
+  transition: 0.3s;
+  &:active{
+    scale: 0.8;
+  }
 }
 
 // .carousel .slider-wrapper {

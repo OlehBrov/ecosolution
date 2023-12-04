@@ -91,7 +91,7 @@ export const ContactForm = () => {
               ) : null}
             </div>
 
-            <button type="submit" className="submit-btn">Send <span className="link-arrow_wrap"><BtnArrow height={16} width={16}/></span> </button>
+            <button type="submit" className="submit-btn">Send <span className="link-arrow_wrap"><BtnArrow height={16} width={16} color="#173D33"/></span> </button>
           </Form>
         )}
       </Formik>

@@ -78,24 +78,17 @@
   display: inline-flex;
   border-radius: 500px;
   background: #97d28b;
-  //   padding: 8px;
+  
   justify-content: center;
   align-items: center;
   gap: 10px;
   transform: rotate(-90deg);
+  transition: scale 0.3s;
+  &:hover{
+    scale: 1.2;
+  }
 }
-// .footer-contacts {
-//   display: flex;
-//   flex-direction: column;
-//   gap: 16px;
-//   justify-content: center;
-//   align-items: center;
 
-//   & a {
-//     font-size: 16px;
-//     letter-spacing: -0.64px;
-//   }
-// }
 .copyright {
   font-family: "Fira Sans";
   font-size: 16px;

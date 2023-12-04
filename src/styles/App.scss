@@ -24,7 +24,7 @@ $desktop: 1280px;
   box-sizing: border-box;
 }
 html {
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
 // #root {
 //   scroll-behavior: smooth;
@@ -34,6 +34,16 @@ body {
   margin: 0;
   color: #173d33;
   position: relative;
+}
+.prevent-scroll {
+  // height: 100%;
+  overflow: hidden;
+  @media screen and (min-width: $desktop) {
+    padding-right: 18px;
+    & header {
+      padding-right: 18px;
+    }
+  }
 }
 ul {
   list-style: none;

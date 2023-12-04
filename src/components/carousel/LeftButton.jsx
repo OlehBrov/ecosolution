@@ -9,7 +9,7 @@ export const LeftButton = ({ onClick, ...rest }) => {
   return (
     <button className="slide-btn prev-slide-btn" onClick={() => onClick()}>
       {" "}
-      <BtnArrow />
+      <BtnArrow height={36} width={36} color="#173D33"/>
     </button>
   );
 };

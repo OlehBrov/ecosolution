@@ -14,6 +14,8 @@ header {
   display: flex;
   align-items: center;
   position: relative;
+  transition: 0.3s;
+ 
   @media screen and (min-width: $tablet) {
     & .contact-btn {
       margin-left: 12px;
@@ -56,4 +58,9 @@ header {
   flex-shrink: 0;
   margin-right: 0;
   margin-left: auto;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover{
+    background: #a8d5a0;
+  }
 }
