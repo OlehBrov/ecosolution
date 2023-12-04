@@ -1,4 +1,3 @@
-// import { Link } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import { Header } from "./sections/header/Header";
 import { HeroSection } from "./sections/hero/Hero";
@@ -13,7 +12,6 @@ import { CustomersSection } from "./sections/ourCustomers/CustomersSection";
 import { ContactUsSection } from "./sections/contactUs/ContactUsSection";
 
 import { Footer } from "./sections/footer/Footer";
-import { BurgerMenu } from "./components/BurgerMenu";
 import gsap from "gsap";
 
 function App() {
@@ -35,28 +33,18 @@ function App() {
   useEffect(() => {
     screenMatcher(window.screen.width);
   }, []);
-  const [menuIsOpen, SetMenuIsOpen] = useState(false);
 
   const menuTl = gsap.timeline({ paused: true });
 
   menuTl.to(".burger-container", {
     duration: 1,
     opacity: 1,
-    height: "100vh", // change this to 100vh for full-height menu
+    height: "100vh", 
     ease: "expo.inOut",
+    visibility: "visible",
     zIndex: 15,
   });
-  // menuTl.from(
-  //   ".burger-menu-item",
-  //   {
-  //     duration: 1,
-  //     opacity: 0,
-  //     y: 0,
-  //     stagger: 0.1,
-  //     ease: "expo.inOut",
-  //   },
-  //   "-=0.5"
-  // );
+
   menuTl.reverse();
   const burgerMenuHandler = () => {
     menuTl.reversed(!menuTl.reversed());
@@ -65,7 +53,6 @@ function App() {
 
   return (
     <>
-      
       <Header burgerMenuHandler={burgerMenuHandler} screen={currentScreen} />
       <HeroSection />
       <IntroductionSection currentScreen={currentScreen} />

@@ -1,6 +1,50 @@
 import { useEffect, useState } from "react";
-import data from "../data/values.json";
 import { breakpoints } from "../utils/mediaConstants";
+import openness from '../images/values/maximize-circle.svg';
+import responsibility from '../images/values/global-edit.svg';
+import innovation from '../images/values/cpu-charge.svg';
+import quality from '../images/values/ranking.svg';
+import windFarms from '../images/values/wind-farms-fields.png'
+import workers from '../images/values/man-worker-firld-by-solar-panels.png'
+
+
+
+
+const valuesData = [
+  {
+    "id": 1,
+    "name": "Openness",
+    "image": openness,
+    "text": "to the world, people, new ideas and projects"
+  },
+  {
+    "id": 2,
+    "name": "Responsibility",
+    "image": responsibility,
+    "text": "we are aware that the results of our work have an impact on our lives and the lives of future generations"
+  },
+  {
+    "id": 3,
+    "image": windFarms
+  },
+
+  {
+    "id": 5,
+    "name": "Innovation",
+    "image": innovation,
+    "text": "we use the latest technology to implement non-standard solutions"
+  },
+  {
+    "id": 6,
+    "name": "Quality",
+    "image": quality,
+    "text": "we do not strive to be the first among others, but we want to be the best in our business"
+  },
+  {
+    "id": 4,
+    "image": workers
+  }
+]
 
 export const ValuesGallery = ({ currentScreen }) => {
   const [values, setValues] = useState([]);
@@ -8,12 +52,12 @@ export const ValuesGallery = ({ currentScreen }) => {
   useEffect(() => {
     if (window.screen.width < breakpoints.wTablet) {
       setValues(
-        data.filter((el) => {
+        valuesData.filter((el) => {
           return el.hasOwnProperty("name");
         })
       );
     } else {
-      setValues(data);
+      setValues(valuesData);
     }
   }, [currentScreen]);
 

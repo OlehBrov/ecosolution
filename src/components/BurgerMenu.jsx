@@ -1,5 +1,5 @@
 import { BtnArrow } from "./BtnArrow";
-import { Facebook, address } from "./addressLinks/Facebook";
+import { Facebook} from "./addressLinks/Facebook";
 import { Instagram } from "./addressLinks/Instagram";
 
 

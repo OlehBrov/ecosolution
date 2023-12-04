@@ -18,15 +18,12 @@ export const FaqSection = () => {
   useEffect(() => {
     setFaqData(data);
   }, []);
-  const buttonHandler = (data) => {
-    console.log("data", data);
-  };
+  
   return (
-    <div className="container faq-container">
-      <div id="faq-section" className="grid-wrapper">
+    <div id="faq-section" className="container faq-container">
+      <div  className="grid-wrapper">
         <h2 className="section-heading faq-heading">Frequently Asked Questions</h2>
         <Accordion
-          onChange={buttonHandler}
           preExpanded={["001"]}
           allowZeroExpanded={true}
         >

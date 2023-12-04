@@ -1,4 +1,3 @@
-import { Adress } from "../../components/Adress";
 import { LinkArrow } from "../../components/LinkArrow";
 
 export const HeroSection = () => {

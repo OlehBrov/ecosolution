@@ -63,8 +63,8 @@ export const ProductionSection = ({ currentScreen }) => {
     } else setShowCarousel(false);
   }, [currentScreen]);
   return (
-    <div className="container production-container">
-      <h2 id="services-section" className="section-heading production-heading">
+    <div id="services-section"className="container production-container">
+      <h2  className="section-heading production-heading">
         Electricity we produced for all time
       </h2>
       <div className="counter-section">
@@ -120,29 +120,29 @@ export const ProductionSection = ({ currentScreen }) => {
           <div className="services-nav">
             <ul className="services-list">
               <li className="services-item">
-                <a href="#" className="services-item-link">
+                <p className="services-item-link">
                   Solar
-                </a>
+                </p>
               </li>
               <li className="services-item">
-                <a href="#" className="services-item-link">
+                <p className="services-item-link">
                   Wind
-                </a>
+                </p>
               </li>
               <li className="services-item">
-                <a href="#" className="services-item-link">
+                <p className="services-item-link">
                   Hydro
-                </a>
+                </p>
               </li>
               <li className="services-item">
-                <a href="#" className="services-item-link">
+                <p className="services-item-link">
                   Thermal
-                </a>
+                </p>
               </li>
               <li className="services-item">
-                <a href="#" className="services-item-link">
+                <p className="services-item-link">
                   Nuclear
-                </a>
+                </p>
               </li>
             </ul>
           </div>

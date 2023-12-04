@@ -22,9 +22,8 @@ export const ContactForm = () => {
         }}
         validationSchema={SignupSchema}
         validateOnBlur
-        onSubmit={(values) => {
-          // same shape as initial values
-          // console.log(values);
+      onSubmit={(values) => {
+          console.log('Contact form data:', values)
         }}
       >
         {({ errors, touched, blur, values }) => (

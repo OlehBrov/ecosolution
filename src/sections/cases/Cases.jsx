@@ -1,18 +1,61 @@
-import { Children, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-import data from "../../data/cases.json";
 
+import solar1 from '../../images/cases/solar1.jpg';
+import solar2 from '../../images/cases/solar2.jpg';
+import solar3 from '../../images/cases/solar3.jpg';
+import solar4 from '../../images/cases/solar4.jpg';
+import solar5 from '../../images/cases/solar5.png';
 import { LinkArrow } from "../../components/LinkArrow";
 
 import Carousel from "react-multi-carousel";
-import { getClones } from "react-multi-carousel/lib/utils/clones";
-// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { getOriginalCounterPart } from "react-multi-carousel/lib/utils";
+
+
 import "react-multi-carousel/lib/styles.css";
 import { LeftButton } from "../../components/carousel/LeftButton";
 import { RightButton } from "../../components/carousel/RightButton";
 import { breakpoints } from "../../utils/mediaConstants";
 import React from "react";
+
+
+const casesData = [
+   {
+    "id": 1,
+    "name": "Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”",
+    "about": "Wind Power for auto field irrigation",
+    "date": "July 2023",
+    "image": solar1
+  },
+  {
+    "id": 2,
+    "name": "Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”",
+    "about": "Wind Power for auto field irrigation",
+    "date": "July 2023",
+    "image": solar2
+  },
+  {
+    "id": 3,
+    "name": "Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”",
+    "about": "Wind Power for auto field irrigation",
+    "date": "July 2023",
+    "image": solar3
+  },
+  {
+    "id": 4,
+    "name": "Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”",
+    "about": "Wind Power for auto field irrigation",
+    "date": "July 2023",
+    "image": solar4
+  },
+  {
+    "id": 5,
+    "name": "Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”",
+    "about": "Wind Power for auto field irrigation",
+    "date": "July 2023",
+    "image": solar5
+  }
+]
+
 
 export const Cases = ({ currentScreen }) => {
   const [cases, setCases] = useState([]);
@@ -21,7 +64,7 @@ export const Cases = ({ currentScreen }) => {
   
   const carouselRef = useRef(null);
   useEffect(() => {
-    setCases(data);
+    setCases(casesData);
   }, []);
   useEffect(() => {
     if (
@@ -32,16 +75,12 @@ export const Cases = ({ currentScreen }) => {
     } else setShowPartial(true);
   }, [currentScreen]);
 
-  //   useEffect(() => {
-  //   setChildrenArray(Children.toArray(carouselRef.current.props.children))
-  // }, [carouselRef])
+ 
 
   const counter = (nextSlide, { currentSlide, onMove }, direction) => {
-    console.log("nextSlide", nextSlide);
-    console.log("currentSlide", currentSlide);
-    
+        
     if (nextSlide > currentSlide) {
-      // setCurrentPage(nextSlide + currentSlide - sliderIndex );
+     
 
       if (currentSlide > cases.length) {
         setCurrentPage(currentSlide - cases.length);

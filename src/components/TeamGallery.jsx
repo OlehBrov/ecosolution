@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import data from "../data/team.json";
 import member1 from '../images/team/desktop_team-member-1.jpg'
 import member2 from '../images/team/desktop_team-member-2.jpg'
@@ -9,6 +9,9 @@ import member4 from '../images/team/desktop_team-member-4.jpg'
 
 export const TeamGallery = () => {
   const [team, setTeam] = useState(data);
+  useEffect(() => {
+    setTeam(data)
+  }, [])
   const teamPhoto = [member1, member2, member3, member4]
 
     return <div className="team-cards-grid">

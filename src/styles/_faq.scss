@@ -1,5 +1,5 @@
 .container.faq-container {
-  // padding-top: 36px;
+  padding-top: 36px;
   @media screen and (min-width: $tablet) {
     padding-top: 127px;
   }
@@ -16,7 +16,9 @@
   }
 }
 .faq-heading {
+  width: 320px;
   @media screen and (min-width: $tablet) {
+    width: 347px;
     grid-area: Heading;
   }
 }
@@ -41,10 +43,9 @@
 .accordion__heading {
   font-size: 18px;
   position: relative;
+  cursor: pointer;
 }
-// .accordion__button {
-//   position: relative;
-// }
+
 .accordion__item {
   position: relative;
   padding-left: 24px;

@@ -82,7 +82,6 @@
   font-style: normal;
   font-weight: 700;
   line-height: 48px;
-  /* 100% */
   text-transform: uppercase;
   &::after {
     content: " kWh";
@@ -107,7 +106,6 @@
       top: 115px;
       right: -110px;
     }
-    /* 100% */
   }
   @media screen and (min-width: $tablet) {
     font-size: 100px;
@@ -138,13 +136,11 @@
   font-style: normal;
   font-weight: 400;
   line-height: 36px;
-  /* 100% */
   text-transform: uppercase;
   @media screen and (min-width: $tablet) {
     font-size: 40px;
 
     line-height: 40px;
-    /* 100% */
   }
 }
 .services-nav {
@@ -160,7 +156,6 @@
   }
 }
 .services-list {
-  //    justify-content: center;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -215,13 +210,10 @@
   transform: rotate(-90deg);
   transform-origin: right top;
   width: 100%;
-  /* Set a height equivalent to the viewport width */
   height: 100%;
-  /* Set a width equivalent to the viewport height */
   overflow: hidden;
   position: absolute;
   top: 100%;
-  /* Adjust as needed */
 }
 
 .vertical-carousel-container .react-multi-carousel-track {
@@ -232,9 +224,7 @@
 
 .vertical-carousel-container .react-multi-carousel-item {
   width: 100%;
-  /* Set a height equivalent to the viewport width */
   height: 100%;
-  /* Set a width equivalent to the viewport height */
   flex: none;
 }
 .control-dots {
