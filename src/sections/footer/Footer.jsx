@@ -11,7 +11,7 @@ export const Footer = () => {
       <div className="container footer-container">
         <div className="footer-grid">
           <LogoText />
-          <a href="#main-section" className="footer-link">
+          <a href="#main-section" className="footer-link" alt="Link to scroll to top of the page">
             {" "}
             <BtnArrow height={16} width={16} color="#173D33"/>
           </a>

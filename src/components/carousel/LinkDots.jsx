@@ -6,8 +6,8 @@ export const LinkDots = (onClickHandler, isSelected, index, label) => {
     return (
       <li
         // style={{ ...indicatorStyles, background: '#000' }}
-        aria-label={`Selected: ${label} ${index + 1}`}
-        title={`Selected: ${label} ${index + 1}`}
+        aria-label={`Selected: ${casesGallery[index].tag}`}
+        title={`Selected: ${casesGallery[index].tag}`}
         className="dots-item active"
         ><span className="dots-text active">{casesGallery[index].tag} </span></li>
     );
@@ -21,8 +21,8 @@ export const LinkDots = (onClickHandler, isSelected, index, label) => {
       key={index}
       role="button"
       tabIndex={0}
-      title={`${label} ${index + 1}`}
-      aria-label={`${label} ${index + 1}`}
+      title={`${casesGallery[index].tag}`}
+      aria-label={`${casesGallery[index].tag}`}
       className="dots-item"
     ><span className="dots-text">{casesGallery[index].tag}</span></li>
   );

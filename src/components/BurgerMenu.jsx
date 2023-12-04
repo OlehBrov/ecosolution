@@ -1,7 +1,7 @@
 import { BtnArrow } from "./BtnArrow";
-import { Facebook } from "./addressLinks/Facebook";
+import { Facebook, address } from "./addressLinks/Facebook";
 import { Instagram } from "./addressLinks/Instagram";
-import { SocialsLink } from "./addressLinks/SocialsLink";
+
 
 export const BurgerMenu = ({ burgerMenuHandler }) => {
   return (
@@ -21,6 +21,7 @@ export const BurgerMenu = ({ burgerMenuHandler }) => {
                 href="#main-section"
                 className="burger-menu-item-link"
                 onClick={burgerMenuHandler}
+                alt="Link to main section"
               >
                 Main <BtnArrow height={16} width={16} color="#fff" />{" "}
               </a>
@@ -30,6 +31,7 @@ export const BurgerMenu = ({ burgerMenuHandler }) => {
                 href="#about-section"
                 className="burger-menu-item-link"
                 onClick={burgerMenuHandler}
+                alt="Link to section about company"
               >
                 About <BtnArrow height={16} width={16} color="#fff" />
               </a>
@@ -39,6 +41,7 @@ export const BurgerMenu = ({ burgerMenuHandler }) => {
                 href="#services-section"
                 className="burger-menu-item-link"
                 onClick={burgerMenuHandler}
+                alt="Link to section about company services"
               >
                 Service <BtnArrow height={16} width={16} color="#fff" />
               </a>
@@ -48,6 +51,7 @@ export const BurgerMenu = ({ burgerMenuHandler }) => {
                 href="#cases-section"
                 className="burger-menu-item-link"
                 onClick={burgerMenuHandler}
+                alt="Link to section about completed cases"
               >
                 Cases <BtnArrow height={16} width={16} color="#fff" />
               </a>
@@ -57,6 +61,7 @@ export const BurgerMenu = ({ burgerMenuHandler }) => {
                 href="#faq-section"
                 className="burger-menu-item-link"
                 onClick={burgerMenuHandler}
+                alt="Link to frequently asked question section"
               >
                 FAQ <BtnArrow height={16} width={16} color="#fff" />
               </a>
@@ -66,6 +71,7 @@ export const BurgerMenu = ({ burgerMenuHandler }) => {
                 href="#customers-section"
                 className="burger-menu-item-link"
                 onClick={burgerMenuHandler}
+                alt="Link to the list of top company clients"
               >
                 Customers <BtnArrow height={16} width={16} color="#fff" />
               </a>
@@ -75,6 +81,7 @@ export const BurgerMenu = ({ burgerMenuHandler }) => {
                 href="#contact-us-section"
                 className="burger-menu-item-link"
                 onClick={burgerMenuHandler}
+                alt="Link to form to send message to company"
               >
                 Contact Us
                 <BtnArrow height={16} width={16} color="#fff" />
@@ -87,6 +94,7 @@ export const BurgerMenu = ({ burgerMenuHandler }) => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={burgerMenuHandler}
+              alt="Link to company facebook page"
             >
               <Facebook width="24" height="24" color="#fff" />
             </a>
@@ -95,6 +103,7 @@ export const BurgerMenu = ({ burgerMenuHandler }) => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={burgerMenuHandler}
+               alt="Link to company instagram page"
             >
               <Instagram width="24" height="24" color="#fff" />
             </a>

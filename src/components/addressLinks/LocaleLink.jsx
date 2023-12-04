@@ -9,6 +9,7 @@ export const LocaleLink = ({ showlabel = true }) => {
           target="_blank"
           rel="noopener noreferrer"
           className="contacts-contact-link"
+           alt="Link to open google maps in new page with company address"
         >
          {showlabel && <Local /> }79005, Ukraine, Lvivstreet. Shota Rustaveli, 7
         </a>

@@ -1,15 +1,15 @@
-import { useState } from "react";
+
 import CountUp from "react-countup";
 
 export const Counter = () => {
-  const [value, setValue] = useState(1134147814)
+  
   
 
   return (
     <CountUp
       startOnMount={false}
       start={100000}
-      end={value}
+      end={1134147814}
       duration={2.75}
       separator=" "
       enableScrollSpy={true}

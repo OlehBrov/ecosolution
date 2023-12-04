@@ -8,6 +8,7 @@ export const EmailLink = ({ showlabel = true }) => {
         <a
           href="mailto:office@ecosolution.com"
           className="contacts-contact-link"
+          alt="Link to send an email to company"
         >
          {showlabel && <Email /> }office@ecosolution.com
         </a>

@@ -16,7 +16,7 @@ export const HeroSection = () => {
             sources, generating power generation using energy wind, sun, water,
             biomass
           </p>
-          <a href="#cases-section" className="hero-link">
+          <a href="#cases-section" className="hero-link" alt="Link to scroll to cases section">
             Learn more <LinkArrow />
           </a>
         </div>

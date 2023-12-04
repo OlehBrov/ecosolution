@@ -12,6 +12,7 @@ export const SocialsLink = ({ showlabel = true }) => {
           target="_blank"
           rel="noopener noreferrer"
           className="contacts-contact-link social-link"
+          alt="Link to company facebook page"
         >
           <Facebook />
         </a>
@@ -21,6 +22,7 @@ export const SocialsLink = ({ showlabel = true }) => {
           target="_blank"
           rel="noopener noreferrer"
           className="contacts-contact-link social-link"
+          alt="Link to company instagram page"
         >
           <Instagram />
         </a>
