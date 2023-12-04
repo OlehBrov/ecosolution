@@ -14,7 +14,7 @@
 }
 
 .container.mobile-burger-menu-container {
-  height: 100%;
+  height: 100dvh;
 }
 .burger-menu {
   display: flex;
@@ -30,6 +30,9 @@
     max-height: 873px;
     flex-shrink: 0;
     margin-left: auto;
+  }
+  @media screen and (min-width: $desktop) {
+    height: 873px;
   }
 }
 
@@ -68,16 +71,28 @@
 }
 .burger-menu-item-link {
   color: #fff;
-
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-family: "Fira Sans";
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.96px;
+  transition: 0.3s;
+  & svg {
+    transform: rotate(-45deg);
+  }
+  &:hover,
+  :focus {
+    scale: 1.1;
+  }
 }
 
 .burger-socilals {
   margin-top: auto;
   margin-bottom: 0;
+  display: flex;
+  gap: 8px;
 }
