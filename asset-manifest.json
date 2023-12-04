@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ecosolution/static/css/main.d17e1376.css",
-    "main.js": "/ecosolution/static/js/main.19f29e0c.js",
+    "main.css": "/ecosolution/static/css/main.028fa002.css",
+    "main.js": "/ecosolution/static/js/main.7d99ec7d.js",
     "static/media/solar2.jpg": "/ecosolution/static/media/solar2.2fec9ba75dbb43fbd01d.jpg",
     "static/media/solar4.jpg": "/ecosolution/static/media/solar4.57a88829be60e80ec3fd.jpg",
     "static/media/solar3.jpg": "/ecosolution/static/media/solar3.c8d6a57ff4590c93c561.jpg",
@@ -43,11 +43,11 @@
     "static/media/sms.svg": "/ecosolution/static/media/sms.7cc71491d503b020d8f6054da3c5f250.svg",
     "static/media/activeDotArrow.svg": "/ecosolution/static/media/activeDotArrow.fcd27c13a74d50c9c6a5.svg",
     "static/media/close-light.svg": "/ecosolution/static/media/close-light.f9cac21de5db4a342bd7.svg",
-    "main.d17e1376.css.map": "/ecosolution/static/css/main.d17e1376.css.map",
-    "main.19f29e0c.js.map": "/ecosolution/static/js/main.19f29e0c.js.map"
+    "main.028fa002.css.map": "/ecosolution/static/css/main.028fa002.css.map",
+    "main.7d99ec7d.js.map": "/ecosolution/static/js/main.7d99ec7d.js.map"
   },
   "entrypoints": [
-    "static/css/main.d17e1376.css",
-    "static/js/main.19f29e0c.js"
+    "static/css/main.028fa002.css",
+    "static/js/main.7d99ec7d.js"
   ]
 }
