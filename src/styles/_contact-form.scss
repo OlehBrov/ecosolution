@@ -20,7 +20,7 @@
     position: relative;
     background: none;
     border: none;
-    padding: 8px 0px;
+    padding: 10px;
   }
 }
 .input-field-wrap {
@@ -69,7 +69,7 @@
   padding: 4px 4px 4px 16px;
   justify-content: center;
   align-items: center;
-
+  width: 100px;
   color: #173d33;
 
   font-family: "Fira Sans";
@@ -84,7 +84,7 @@
 
   background-repeat: no-repeat;
   transition: all ease 0.8s;
-
+  cursor: pointer;
   &:hover {
     background-size: 200% 200%;
 
@@ -92,4 +92,8 @@
 
     color: #173d33;
   }
+}
+.submitted {
+  width: 100%;
+  transition: width 0.5s ease-out;
 }

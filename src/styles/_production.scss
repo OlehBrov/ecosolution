@@ -265,8 +265,14 @@
 .dots-item {
   display: flex;
   padding-left: 40%;
+  cursor: pointer;
+}
+.dots-text:hover, .dots-text:focus{
+  color: #97d28b;
+  transition: color 0.3s ease-out;
 }
 .dots-text {
+  transition: color 0.3s ease-out;
   &.active {
     color: #97d28b;
   
