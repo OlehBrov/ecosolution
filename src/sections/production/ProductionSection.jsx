@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+
 import { Counter } from "../../components/Counter";
 import { breakpoints } from "../../utils/mediaConstants";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
-
 import nuclear from "../../images/casesGalleryImgs/nuclear.jpg";
 import wind from "../../images/casesGalleryImgs/wind.jpg";
 import solar from "../../images/casesGalleryImgs/solar.jpg";

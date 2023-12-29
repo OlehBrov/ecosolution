@@ -1,6 +1,5 @@
 import { LogoText } from "../../components/LogoText";
 import { MenuBtn } from "../../components/MenuBtn";
-
 import { breakpoints } from "../../utils/mediaConstants";
 import { InTouchBtn } from "../../components/InTouchBtn";
 import { BurgerMenu } from "../../components/BurgerMenu";

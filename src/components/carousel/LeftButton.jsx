@@ -18,8 +18,7 @@ export const LeftButton = ({ onClick, ...rest }) => {
       onMouseOver={hoverHandler}
       onMouseOut={hoverOffHandler}
     >
-      {" "}
-      <BtnArrow height={36} width={36} color={arrowColor} />
+    <BtnArrow height={36} width={36} color={arrowColor} />
     </button>
   );
 };

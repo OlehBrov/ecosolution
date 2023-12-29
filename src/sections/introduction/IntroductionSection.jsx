@@ -1,6 +1,5 @@
-// import turbine from '../../images/wind-turbine-clean-energy.jpg'
-
 import { useEffect, useState } from "react";
+
 import { TeamGallery } from "../../components/TeamGallery";
 import { EmailLink } from "../../components/addressLinks/EmailLink";
 import { LocaleLink } from "../../components/addressLinks/LocaleLink";

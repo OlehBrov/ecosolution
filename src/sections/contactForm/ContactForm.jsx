@@ -1,23 +1,49 @@
+import { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
+
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
+
 import { BtnArrow } from "../../components/BtnArrow";
-import { useState } from "react";
-import gsap from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
+import { breakpoints } from "../../utils/mediaConstants";
 
 gsap.registerPlugin(TextPlugin);
-export const ContactForm = () => {
-  const [submitted, setSubmitted] = useState(false);
+export const ContactForm = (currentScreen) => {
+const submitBtn = useRef(null)
+  const [btnSize, setBtnSize] = useState("0px")
+  useEffect(() => {
+    if (currentScreen === breakpoints.wDesktop) {
+      setBtnSize("580px")
+    } else {
+      setBtnSize('294px')
+    } 
+
+  }, [currentScreen])
+
   const submitBtnTl = gsap
     .timeline({ paused: true, duration: 1, ease: "none" })
     .to(".submit-btn", {
-      width: "580px",
+      width: btnSize,
     })
     .to(".submit-btn", { background: "#97D28B" }, "<")
-    .to('.submit-btn-txt', {text: "SUBMITTED"})
+    .to(".submit-btn-txt", { text: "SUBMITTED" })
     .to(".submit-btn", { width: "100px" }, "+=1")
-    .to('.submit-btn-txt', {text: "Send"})
+    .to(".submit-btn-txt", { text: "Send" }, "<")
     .to(".submit-btn", { background: "none" });
+
+  const hoverTl = gsap
+    .timeline({ paused: true, duration: 1, ease: "none", delay: 0 })
+    .set(".submit-btn", {
+      backgroundImage: "linear-gradient(90deg, #dcefd8 50%, transparent 51%)",
+      backgroundSize: "100px 100px",
+      backgroundPosition: "-50px -50px",
+      backgroundRepeat: "no-repeat",
+    })
+    .to(".submit-btn", {
+      backgroundSize: "200% 200%",
+      backgroundPosition: "0px 0px",
+    });
 
   const submittedDataHandler = (data) => {
     console.log("submittedDataHandler", data);
@@ -27,6 +53,12 @@ export const ContactForm = () => {
     submitBtnTl.restart();
   };
 
+  const onHover = () => {
+    hoverTl.play();
+  };
+  const offHover = () => {
+    hoverTl.reverse();
+  };
   const SignupSchema = Yup.object().shape({
     fullName: Yup.string()
       .min(2, "Too Short!")
@@ -115,7 +147,13 @@ export const ContactForm = () => {
             ) : null}
           </div>
 
-          <button type="submit" className="submit-btn">
+          <button
+            ref={submitBtn}
+            type="submit"
+            className="submit-btn"
+            onMouseOver={onHover}
+            onMouseLeave={offHover}
+          >
             <span className="submit-btn-txt">Send</span>
             <span className="link-arrow_wrap">
               <BtnArrow height={16} width={16} color="#173D33" />

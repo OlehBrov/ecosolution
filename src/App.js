@@ -65,7 +65,7 @@ function App() {
       <Cases currentScreen={currentScreen} />
       <FaqSection />
       <CustomersSection currentScreen={currentScreen} />
-      <ContactUsSection />
+      <ContactUsSection currentScreen={currentScreen}/>
 
       <Footer />
     </>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { customersCountHandler } from "../../utils/customersCountHandler";
 
+import { customersCountHandler } from "../../utils/customersCountHandler";
 import { breakpoints } from "../../utils/mediaConstants";
 
 export const CustomersSection = ({ currentScreen }) => {

@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from "react";
-
+import {React, useEffect, useRef, useState } from "react";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 import solar1 from '../../images/cases/solar1.jpg';
 import solar2 from '../../images/cases/solar2.jpg';
@@ -7,15 +8,9 @@ import solar3 from '../../images/cases/solar3.jpg';
 import solar4 from '../../images/cases/solar4.jpg';
 import solar5 from '../../images/cases/solar5.png';
 import { LinkArrow } from "../../components/LinkArrow";
-
-import Carousel from "react-multi-carousel";
-
-
-import "react-multi-carousel/lib/styles.css";
 import { LeftButton } from "../../components/carousel/LeftButton";
 import { RightButton } from "../../components/carousel/RightButton";
-import { breakpoints } from "../../utils/mediaConstants";
-import React from "react";
+
 
 
 const casesData = [
@@ -60,21 +55,12 @@ const casesData = [
 export const Cases = ({ currentScreen }) => {
   const [cases, setCases] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [showPartial, setShowPartial] = useState(false);
+  
   
   const carouselRef = useRef(null);
   useEffect(() => {
     setCases(casesData);
   }, []);
-  useEffect(() => {
-    if (
-      currentScreen === breakpoints.wMobile ||
-      currentScreen === breakpoints.wSemiMobile
-    ) {
-      setShowPartial(false);
-    } else setShowPartial(true);
-  }, [currentScreen]);
-
  
 
   const counter = (nextSlide, { currentSlide, onMove }, direction) => {
@@ -130,7 +116,7 @@ export const Cases = ({ currentScreen }) => {
           arrows={true}
           renderArrowsWhenDisabled={true}
           beforeChange={counter}
-          partialVisbile={showPartial}
+          partialVisible={true}
         >
           {cases.map((el) => (
             <div key={el.id} className="case-card-wrapper">
