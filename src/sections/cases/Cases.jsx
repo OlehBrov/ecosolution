@@ -56,38 +56,19 @@ export const Cases = ({ currentScreen }) => {
   const [currentIndex, setCurrentIndex] = useState(1);
 
   const carouselRef = useRef(null);
-  const handlePagNumberChange = (index) => {
-    // Since the carousel is in infinite mode, adjust the index to show a non-negative value
-    console.log("index", index);
-  };
+
   useEffect(() => {
     setCases(casesData);
-    console.log("carouselRef", carouselRef);
+
   }, []);
 
-  // const counter = (nextSlide, { currentSlide, onMove }, carouselState) => {
-  //   console.log("currentSlide", currentSlide);
-  //   console.log("nextSlide", nextSlide);
-  //   console.log("carouselState", carouselState);
-  //   if (nextSlide > currentSlide) {
-  //     if (currentSlide > cases.length) {
-  //       setCurrentPage(currentSlide - cases.length);
-  //     } else {
-  //       setCurrentPage(currentSlide);
-  //     }
-  //   } else if (nextSlide < currentSlide) {
-  //     setCurrentPage(currentSlide + 1);
-  //   } else {
-  //     setCurrentPage((prev) => prev - 1);
-  //   }
-  // };
   const settings = {
     dots: false,
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
     className: "single-slide",
-    // adaptiveHeight: true,
+ 
     centerMode: true,
     // centerPadding: "10%",
     initialSlide: 0,
@@ -137,55 +118,6 @@ export const Cases = ({ currentScreen }) => {
             /{cases.length.toString().padStart(2, "0")}
           </span>
         </p>
-        {/* <Carousel
-          ref={carouselRef}
-          // renderDotsOutside
-          // showDots
-          // customDot={<PageCounter/>}
-          responsive={{
-            nonMobile: {
-              breakpoint: { max: 4000, min: 768 },
-              items: 2,
-              partialVisibilityGutter: 50,
-            },
-            mobile: {
-              breakpoint: { max: 768, min: 0 },
-              items: 1,
-            },
-          }}
-          swipeable={true}
-          showDots={false}
-          infinite={true}
-          customLeftArrow={<LeftButton />}
-          customRightArrow={<RightButton />}
-          arrows={true}
-          renderArrowsWhenDisabled={true}
-          beforeChange={handleAfterChange}
-          // afterChange={handleAfterChange}
-          partialVisible={true}
-        >
-          {cases.map((el) => (
-            <div key={el.id} className="case-card-wrapper" id={el.id}>
-              <div className="cases-image-wrap">
-                {" "}
-                <img className="case-image" src={el.image} alt="" />
-              </div>
-
-              <div className="case-data-wrap">
-                <div className="case-name-wrap">
-                  <p className="case-name">{el.name}</p>
-                  <a href="#" className="case-link">
-                    <LinkArrow />
-                  </a>
-                </div>
-                <div className="case-about-wrap">
-                  <p className="case-about">{el.about}</p>
-                  <p className="case-date">{el.date}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </Carousel> */}
         <Slider {...settings}>
           {cases.map((el) => (
             <div key={el.id} className="case-card-wrapper" id={el.id}>

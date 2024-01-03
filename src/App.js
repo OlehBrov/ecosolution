@@ -39,10 +39,10 @@ function App() {
     screenMatcher(window.screen.width);
   }, []);
 
-  gsap.set(menuContainer, { autoAlpha: 0 });
+ menuContainer &&  gsap.set(menuContainer, { autoAlpha: 0 });
   const menuTl = gsap.timeline({ paused: true });
 
-  menuTl.to(menuContainer, {
+  menuContainer && menuTl.to(menuContainer, {
     duration: 1,
     opacity: 1,
     height: "100vh",
@@ -54,8 +54,7 @@ function App() {
   menuTl.reverse();
 
   const burgerMenuHandler = () => {
-    //  setMenuIsOpen((menuIsOpen) => !menuIsOpen);
-    console.log("burgerMenuHandler");
+
     menuTl.reversed(!menuTl.reversed());
 
     document.querySelector("body").classList.toggle("prevent-scroll");

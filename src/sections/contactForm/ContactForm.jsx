@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 import { Formik, Form, Field } from "formik";
@@ -10,45 +10,55 @@ import { breakpoints } from "../../utils/mediaConstants";
 
 gsap.registerPlugin(TextPlugin);
 export const ContactForm = (currentScreen) => {
-const submitBtn = useRef(null)
-  const [btnSize, setBtnSize] = useState("0px")
+  const submitBtn = useRef(null);
+  const [btnSize, setBtnSize] = useState("0px");
   useEffect(() => {
     if (currentScreen === breakpoints.wDesktop) {
-      setBtnSize("580px")
+      setBtnSize("580px");
     } else {
-      setBtnSize('294px')
-    } 
+      setBtnSize("294px");
+    }
+  }, [currentScreen]);
 
-  }, [currentScreen])
+  const submitBtnTl = gsap.timeline({
+    paused: true,
+    duration: 1,
+    ease: "none",
+  });
 
-  const submitBtnTl = gsap
-    .timeline({ paused: true, duration: 1, ease: "none" })
-    .to(".submit-btn", {
-      width: btnSize,
-    })
-    .to(".submit-btn", { background: "#97D28B" }, "<")
-    .to(".submit-btn-txt", { text: "SUBMITTED" })
-    .to(".submit-btn", { width: "100px" }, "+=1")
-    .to(".submit-btn-txt", { text: "Send" }, "<")
-    .to(".submit-btn", { background: "none" });
+  submitBtn.current &&
+    submitBtnTl
+      .to(".submit-btn", {
+        width: btnSize,
+      })
+      .to(".submit-btn", { background: "#97D28B" }, "<")
+      .to(".submit-btn-txt", { text: "SUBMITTED" })
+      .to(".submit-btn", { width: "100px" }, "+=1")
+      .to(".submit-btn-txt", { text: "Send" }, "<")
+      .to(".submit-btn", { background: "none" });
 
-  const hoverTl = gsap
-    .timeline({ paused: true, duration: 1, ease: "none", delay: 0 })
-    .set(".submit-btn", {
-      backgroundImage: "linear-gradient(90deg, #dcefd8 50%, transparent 51%)",
-      backgroundSize: "100px 100px",
-      backgroundPosition: "-50px -50px",
-      backgroundRepeat: "no-repeat",
-    })
-    .to(".submit-btn", {
-      backgroundSize: "200% 200%",
-      backgroundPosition: "0px 0px",
-    });
+  const hoverTl = gsap.timeline({
+    paused: true,
+    duration: 1,
+    ease: "none",
+    delay: 0,
+  });
+  submitBtn.current &&
+    hoverTl
+      .set(".submit-btn", {
+        backgroundImage: "linear-gradient(90deg, #dcefd8 50%, transparent 51%)",
+        backgroundSize: "100px 100px",
+        backgroundPosition: "-50px -50px",
+        backgroundRepeat: "no-repeat",
+      })
+      .to(".submit-btn", {
+        backgroundSize: "200% 200%",
+        backgroundPosition: "0px 0px",
+      });
 
   const submittedDataHandler = (data) => {
-    console.log("submittedDataHandler", data);
     localStorage.setItem("ecosolutionContactForm", JSON.stringify(data));
-    // setSubmitted(true)
+
     submitBtnTl.play();
     submitBtnTl.restart();
   };
