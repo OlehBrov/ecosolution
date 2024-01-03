@@ -16,10 +16,11 @@ import gsap from "gsap";
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState(breakpoints.wMobile);
-  const [menuContainer, setMenuContainer] = useState(null)
+  const [menuContainer, setMenuContainer] = useState(null);
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
   useEffect(() => {
-   setMenuContainer(document.querySelector(".burger-container"))
-  }, [])
+    setMenuContainer(document.querySelector(".burger-container"));
+  }, []);
   const screenMatcher = (data) => {
     if (data >= breakpoints.wMobile && data < breakpoints.wSemiMobile) {
       setCurrentScreen(breakpoints.wMobile);
@@ -37,6 +38,7 @@ function App() {
   useEffect(() => {
     screenMatcher(window.screen.width);
   }, []);
+
   gsap.set(menuContainer, { autoAlpha: 0 });
   const menuTl = gsap.timeline({ paused: true });
 
@@ -50,8 +52,12 @@ function App() {
   });
 
   menuTl.reverse();
+
   const burgerMenuHandler = () => {
+    //  setMenuIsOpen((menuIsOpen) => !menuIsOpen);
+    console.log("burgerMenuHandler");
     menuTl.reversed(!menuTl.reversed());
+
     document.querySelector("body").classList.toggle("prevent-scroll");
   };
 
@@ -65,7 +71,7 @@ function App() {
       <Cases currentScreen={currentScreen} />
       <FaqSection />
       <CustomersSection currentScreen={currentScreen} />
-      <ContactUsSection currentScreen={currentScreen}/>
+      <ContactUsSection currentScreen={currentScreen} />
 
       <Footer />
     </>
