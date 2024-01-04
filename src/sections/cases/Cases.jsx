@@ -1,4 +1,4 @@
-import { React, useEffect, useRef, useState } from "react";
+import { React, useEffect, useState } from "react";
 import Slider from "react-slick";
 
 import solar1 from "../../images/cases/solar1.jpg";
@@ -51,10 +51,9 @@ const casesData = [
 
 export const Cases = ({ currentScreen }) => {
   const [cases, setCases] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
+
   const [currentIndex, setCurrentIndex] = useState(1);
 
-  const carouselRef = useRef(null);
 
   useEffect(() => {
     setCases(casesData);
