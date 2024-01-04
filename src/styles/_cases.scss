@@ -37,9 +37,11 @@
     margin-right: -24px;
   }
   @media screen and (min-width: $desktop) {
+
     margin-left: -48px;
     margin-right: -48px;
     padding-left: 0px !important;
+    // padding: 0 50px 0 0;
   }
 }
 .slick-track {
@@ -57,9 +59,9 @@
     height: 100%;
   }
 
-  @media screen and (min-width: $desktop) {
-    width: 596px !important;
-  }
+  // @media screen and (min-width: $desktop) {
+  //   width: 596px !important;
+  // }
 }
 
 .case-card-wrapper {

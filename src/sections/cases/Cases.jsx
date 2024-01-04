@@ -10,39 +10,38 @@ import { LinkArrow } from "../../components/LinkArrow";
 import { LeftButton } from "../../components/carousel/LeftButton";
 import { RightButton } from "../../components/carousel/RightButton";
 
-
 const casesData = [
   {
     id: 1,
-    name: "Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”",
+    name: "index0 Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”",
     about: "Wind Power for auto field irrigation",
     date: "July 2023",
     image: solar1,
   },
   {
     id: 2,
-    name: "Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”",
+    name: "index1 Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”",
     about: "Wind Power for auto field irrigation",
     date: "July 2023",
     image: solar2,
   },
   {
     id: 3,
-    name: "Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”",
+    name: "index2 Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”",
     about: "Wind Power for auto field irrigation",
     date: "July 2023",
     image: solar3,
   },
   {
     id: 4,
-    name: "Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”",
+    name: "index3 Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”",
     about: "Wind Power for auto field irrigation",
     date: "July 2023",
     image: solar4,
   },
   {
     id: 5,
-    name: "Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”",
+    name: "index4 Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”",
     about: "Wind Power for auto field irrigation",
     date: "July 2023",
     image: solar5,
@@ -54,10 +53,8 @@ export const Cases = ({ currentScreen }) => {
 
   const [currentIndex, setCurrentIndex] = useState(1);
 
-
   useEffect(() => {
     setCases(casesData);
-
   }, []);
 
   const settings = {
@@ -65,19 +62,17 @@ export const Cases = ({ currentScreen }) => {
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
-    className: "single-slide",
- 
-    centerMode: true,
-    // centerPadding: "10%",
+
     initialSlide: 0,
     responsive: [
       {
         breakpoint: 1280,
         settings: {
+          centerMode: true,
           slidesToShow: 2,
           slidesToScroll: 1,
-
-          centerPadding: "10%",
+          initialSlide: 0,
+          centerPadding: "50%",
         },
       },
       {
@@ -85,6 +80,7 @@ export const Cases = ({ currentScreen }) => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+          initialSlide: 0,
           centerMode: false,
         },
       },
@@ -94,12 +90,19 @@ export const Cases = ({ currentScreen }) => {
           slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: false,
+          // initialSlide: 2,
         },
       },
     ],
     nextArrow: <RightButton />,
     prevArrow: <LeftButton />,
-    afterChange: (index) => setCurrentIndex(index + 1),
+    beforeChange: (index, current) => {
+      console.log("current", current);
+      if (current === -1) current = 4;
+      if (current === -2) current = 3;
+
+      setCurrentIndex(current + 1);
+    },
   };
   return (
     <div id="cases-section" className="container cases-container">
@@ -110,7 +113,7 @@ export const Cases = ({ currentScreen }) => {
       <div className="carousel-wrapper">
         <p className="slides-pages-counter">
           <span className="current-slide-number">
-            {currentIndex.toString().padStart(2, "0")}{" "}
+            {currentIndex && currentIndex.toString().padStart(2, "0")}{" "}
           </span>
           <span className="total-slides-number">
             /{cases.length.toString().padStart(2, "0")}
