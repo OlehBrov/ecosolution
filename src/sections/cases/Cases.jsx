@@ -1,6 +1,5 @@
 import { React, useEffect, useRef, useState } from "react";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import Slider from "react-slick";
 
 import solar1 from "../../images/cases/solar1.jpg";
 import solar2 from "../../images/cases/solar2.jpg";
@@ -10,7 +9,7 @@ import solar5 from "../../images/cases/solar5.png";
 import { LinkArrow } from "../../components/LinkArrow";
 import { LeftButton } from "../../components/carousel/LeftButton";
 import { RightButton } from "../../components/carousel/RightButton";
-import Slider from "react-slick";
+
 
 const casesData = [
   {
