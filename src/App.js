@@ -17,9 +17,10 @@ import gsap from "gsap";
 function App() {
   const [currentScreen, setCurrentScreen] = useState(breakpoints.wMobile);
   const [menuContainer, setMenuContainer] = useState(null);
-  const [menuIsOpen, setMenuIsOpen] = useState(false);
+
   useEffect(() => {
     setMenuContainer(document.querySelector(".burger-container"));
+  
   }, []);
   const screenMatcher = (data) => {
     if (data >= breakpoints.wMobile && data < breakpoints.wSemiMobile) {
@@ -39,30 +40,44 @@ function App() {
     screenMatcher(window.screen.width);
   }, []);
 
- menuContainer &&  gsap.set(menuContainer, { autoAlpha: 0 });
+  menuContainer && gsap.set(menuContainer, { autoAlpha: 0 });
   const menuTl = gsap.timeline({ paused: true });
 
-  menuContainer && menuTl.to(menuContainer, {
-    duration: 1,
-    opacity: 1,
-    height: "100vh",
-    ease: "expo.inOut",
-    visibility: "visible",
-    zIndex: 15,
-  });
+  menuContainer &&
+    menuTl.to(menuContainer, {
+      duration: 1,
+      opacity: 1,
+      height: "100vh",
+      ease: "expo.inOut",
+      visibility: "visible",
+      zIndex: 15,
+    });
 
-  menuTl.reverse();
+  // menuTl.reverse();
+  const openMenu = () => {
+    document.querySelector("body").classList.add("prevent-scroll");
+    menuTl.play();
+    document.querySelector("body").addEventListener("keydown", closeMenuByEsc);
+  };
 
-  const burgerMenuHandler = () => {
-
-    menuTl.reversed(!menuTl.reversed());
-
-    document.querySelector("body").classList.toggle("prevent-scroll");
+  const closeMenuByEsc = (e) => {
+    if (e.code === "Escape") closeMenu();
+  };
+  const closeMenu = () => {
+    document
+      .querySelector("body")
+      .removeEventListener("keydown", closeMenuByEsc);
+    document.querySelector("body").classList.remove("prevent-scroll");
+    menuTl.reverse();
   };
 
   return (
     <>
-      <Header burgerMenuHandler={burgerMenuHandler} screen={currentScreen} />
+      <Header
+        openMenu={openMenu}
+        closeMenu={closeMenu}
+        screen={currentScreen}
+      />
       <HeroSection />
       <IntroductionSection currentScreen={currentScreen} />
       <ValuesSection currentScreen={currentScreen} />

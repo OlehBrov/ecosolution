@@ -4,13 +4,13 @@ import { breakpoints } from "../../utils/mediaConstants";
 import { InTouchBtn } from "../../components/InTouchBtn";
 import { BurgerMenu } from "../../components/BurgerMenu";
 
-export const Header = ({ burgerMenuHandler, screen }) => {
+export const Header = ({ openMenu, closeMenu, screen }) => {
   return (
     <header>
-      <BurgerMenu burgerMenuHandler={burgerMenuHandler} />
+      <BurgerMenu closeMenu={closeMenu} />
       <div className="container header-container">
         <LogoText />
-        <MenuBtn burgerMenuHandler={burgerMenuHandler} />
+        <MenuBtn openMenu={openMenu} />
         {screen === breakpoints.wTablet || screen === breakpoints.wDesktop ? (
           <InTouchBtn />
         ) : null}
